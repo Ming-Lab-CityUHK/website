@@ -1,0 +1,12 @@
+{
+  "name": "Ming Lab",
+  "university": "University Name (placeholder)",
+  "description": "Placeholder description of the Ming Lab's research focus.",
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "Research", "url": "/research/" },
+    { "label": "Publications", "url": "/publications/" },
+    { "label": "Members", "url": "/members/" },
+    { "label": "Contact", "url": "/contact/" }
+  ]
+}

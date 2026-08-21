@@ -1,0 +1,23 @@
+{
+  "_comment": "Data stub for a later pass. 'pi' renders first in its own block; 'people' render as cards. Adding a member = adding an object here.",
+  "pi": {
+    "name": "Prof. Ming",
+    "position": "Principal Investigator",
+    "photo": "",
+    "interests": ["Placeholder interest"],
+    "projects": ["Placeholder project"],
+    "blurb": "Placeholder blurb.",
+    "links": { "github": "", "scholar": "", "email": "" }
+  },
+  "people": [
+    {
+      "name": "Placeholder Member",
+      "position": "PhD Student",
+      "photo": "",
+      "interests": ["Placeholder interest"],
+      "projects": ["Placeholder project"],
+      "blurb": "Placeholder blurb / hobbies.",
+      "links": { "github": "", "scholar": "", "email": "" }
+    }
+  ]
+}

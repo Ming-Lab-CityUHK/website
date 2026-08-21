@@ -1,0 +1,14 @@
+{
+  "_comment": "Data stub for a later pass. One object per paper; the template will group by year. Adding a paper = adding an object here.",
+  "papers": [
+    {
+      "title": "Placeholder paper title",
+      "authors": "A. Author, B. Author, C. Ming",
+      "journal": "Journal Name",
+      "date": "2026-01-15",
+      "year": 2026,
+      "doi": "10.0000/placeholder",
+      "url": "https://doi.org/10.0000/placeholder"
+    }
+  ]
+}
