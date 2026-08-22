@@ -163,20 +163,103 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 
 /* ---------- publications ---------- */
 
-.pub-entry {
-  padding-block: 0.9rem;
+.pub-year { margin-top: 2.75rem; }
+.pub-year:first-of-type { margin-top: 1.75rem; }
+
+/* Mono year, echoing the nav and eyebrow labels. */
+.pub-year-label {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 0.6rem;
   border-bottom: 1px solid var(--line);
 }
-.pub-entry p { margin: 0.15rem 0; }
-.pub-authors { color: var(--muted); font-size: 0.95rem; }
-.pub-venue { font-size: 0.85rem; color: var(--muted); font-family: var(--font-mono); }
 
-.year-header {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  letter-spacing: 0.08em;
-  border-bottom: 2px solid var(--ink);
-  padding-bottom: 0.35rem;
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pub-entry {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 1.5rem;
+  padding-block: 1.6rem;
+  border-bottom: 1px solid var(--line);
+}
+.pub-entry:last-child { border-bottom: 0; }
+
+.pub-figure {
+  aspect-ratio: 4 / 3;
+  background: #f5f7f9;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.pub-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.pub-figure svg {
+  width: 30px;
+  height: 30px;
+  color: #c8cfd7;
+}
+
+/* Shared measure so the title and citation share a right edge. */
+.pub-body { max-width: 50rem; }
+
+.pub-title-line {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.pub-title {
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(29, 91, 216, 0.35);
+}
+.pub-title:hover { text-decoration-color: currentColor; }
+
+.pub-cite {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.pub-journal {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.pub-lab-author { font-weight: 600; }
+
+/* Corresponding-author marker; zero line-height keeps line spacing even. */
+.pub-corresponding {
+  font-size: 0.75em;
+  line-height: 0;
+}
+
+@media (max-width: 559px) {
+  .pub-entry {
+    grid-template-columns: 76px 1fr;
+    gap: 1rem;
+    padding-block: 1.3rem;
+  }
+  .pub-figure svg { width: 22px; height: 22px; }
 }
 
 main { padding-block: 2.5rem 4rem; }

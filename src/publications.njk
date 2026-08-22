@@ -4,3 +4,37 @@ title: Publications
 permalink: /publications/
 ---
 <h1>Publications</h1>
+
+{% for group in publications.papers | byYear %}
+<section class="pub-year">
+  <h2 class="pub-year-label">{{ group.year }}</h2>
+
+  <ol class="pub-list">
+    {% for paper in group.items %}
+    {% set link = paper.url if paper.url else "https://doi.org/" + paper.doi %}
+    <li class="pub-entry">
+      <div class="pub-figure">
+        {% if paper.thumbnail %}
+          <img src="{{ paper.thumbnail }}" alt="">
+        {% else %}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+            <path d="M3 15l5-4 4 3 3-2 6 4"></path>
+            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+          </svg>
+        {% endif %}
+      </div>
+
+      <div class="pub-body">
+        <p class="pub-title-line">
+          <a class="pub-title" href="{{ link }}" target="_blank" rel="noopener">{{ paper.title }}</a>
+        </p>
+        <p class="pub-cite">
+          {{ paper.authors | apaAuthors | safe }}, <em class="pub-journal">{{ paper.journal }}</em> ({{ paper.year }}).
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endfor %}

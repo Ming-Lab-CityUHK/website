@@ -1,14 +1,124 @@
 {
-  "_comment": "Data stub for a later pass. One object per paper; the template will group by year. Adding a paper = adding an object here.",
+  "_comment": "One object per paper. Rendered as APA 7 references, grouped by year (newest year first); within a year, papers appear in the order listed here. Fields: title, authors [{family, given, lab, corresponding}], year, date (reference only, no longer affects ordering), journal (spelled out in full), volume, issue, pages, doi, url (defaults to the DOI link), thumbnail (path under /assets/, blank shows a placeholder). Author initials may be written \"KM\" or \"K. M.\" — both render as \"K. M.\". Set \"lab\": true to bold a lab member. \"corresponding\": true renders a superscript # after the author's name.",
   "papers": [
     {
-      "title": "Placeholder paper title",
-      "authors": "A. Author, B. Author, C. Ming",
-      "journal": "Journal Name",
-      "date": "2026-01-15",
-      "year": 2026,
-      "doi": "10.0000/placeholder",
-      "url": "https://doi.org/10.0000/placeholder"
+      "title": "TSPYL2 Regulates the expression of EZH2 target genes in neurons",
+      "authors": [
+        { "family": "Liu", "given": "H" },
+        { "family": "So", "given": "J" },
+        { "family": "Peng", "given": "L" },
+        { "family": "Tsang", "given": "KH" },
+        { "family": "Mak", "given": "P" },
+        { "family": "Chan", "given": "KM", "lab": true, "corresponding": true },
+        { "family": "Chan", "given": "SY", "corresponding": true }
+      ],
+      "year": 2018,
+      "date": "2018-07-26",
+      "journal": "Molecular Neurobiology",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1007/s12035-018-1238-y",
+      "url": "",
+      "thumbnail": ""
+    },
+    {
+      "title": "RNF169 limits 53BP1 deposition at DSBs to stimulate single-strand annealing repair",
+      "authors": [
+        { "family": "An", "given": "L" },
+        { "family": "Li", "given": "J" },
+        { "family": "Dong", "given": "C" },
+        { "family": "Chen", "given": "J" },
+        { "family": "Yuan", "given": "J" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Yu", "given": "C" },
+        { "family": "Legube", "given": "G" },
+        { "family": "Stark", "given": "J" },
+        { "family": "Huen", "given": "MS" }
+      ],
+      "year": 2018,
+      "date": "",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1073/pnas.1804823115",
+      "url": "",
+      "thumbnail": ""
+    },
+    {
+      "title": "Rtt105 functions as a chaperone for replication protein A to preserve genome stability",
+      "authors": [
+        { "family": "Li", "given": "S" },
+        { "family": "Xu", "given": "Z" },
+        { "family": "Xu", "given": "J" },
+        { "family": "Zuo", "given": "L" },
+        { "family": "Yu", "given": "C" },
+        { "family": "Zheng", "given": "P" },
+        { "family": "Gan", "given": "H" },
+        { "family": "Wang", "given": "X" },
+        { "family": "Li", "given": "L" },
+        { "family": "Sharma", "given": "S" },
+        { "family": "Chabes", "given": "A" },
+        { "family": "Li", "given": "D" },
+        { "family": "Wang", "given": "S" },
+        { "family": "Zheng", "given": "S" },
+        { "family": "Li", "given": "J" },
+        { "family": "Chen", "given": "X" },
+        { "family": "Sun", "given": "Y" },
+        { "family": "Xu", "given": "D" },
+        { "family": "Han", "given": "J" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Qi", "given": "Z" },
+        { "family": "Feng", "given": "J" },
+        { "family": "Li", "given": "Q" }
+      ],
+      "year": 2018,
+      "date": "",
+      "journal": "The EMBO Journal",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.15252/embj.201899154",
+      "url": "",
+      "thumbnail": ""
+    },
+    {
+      "title": "Mechanism of cancer: Oncohistones in action",
+      "authors": [
+        { "family": "Qiu", "given": "L" },
+        { "family": "Hu", "given": "X" },
+        { "family": "Jing", "given": "Q" },
+        { "family": "Zeng", "given": "X" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Han", "given": "J" }
+      ],
+      "year": 2018,
+      "date": "2018-04-30",
+      "journal": "Journal of Genetics and Genomics",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1016/j.jgg.2018.04.004",
+      "url": "",
+      "thumbnail": ""
+    },
+    {
+      "title": "Histone H3 mutations in cancer",
+      "authors": [
+        { "family": "Wan", "given": "YCE" },
+        { "family": "Liu", "given": "J" },
+        { "family": "Chan", "given": "KM", "lab": true, "corresponding": true }
+      ],
+      "year": 2018,
+      "date": "",
+      "journal": "Current Pharmacology Reports",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1007/s40495-018-0141-6",
+      "url": "",
+      "thumbnail": ""
     }
   ]
 }

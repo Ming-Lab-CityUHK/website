@@ -27,9 +27,26 @@ src/
 
 ## Adding content
 
-- **New paper** → append an object to `src/_data/publications.json`.
-- **New member** → append an object to `src/_data/members.json`.
-- Templates render these automatically; no HTML edits needed.
+**New paper** → append an object to `src/_data/publications.json`. Each entry
+renders as a title linking to its DOI, with an APA 7 citation beneath it,
+grouped under the right year automatically. Years run newest first; within a
+year, papers appear in the order they are listed in the file.
+
+| Field | Notes |
+| --- | --- |
+| `authors` | `[{ "family": "Chan", "given": "KM", "lab": true, "corresponding": true }]`. Initials may be written `KM` or `K. M.` — both render `K. M.` `lab` bolds a lab member; `corresponding` adds a superscript `#`. Use `literal` instead of `family`/`given` for group authors. |
+| `journal` | Spelled out in full, as APA 7 expects. |
+| `doi` | Builds the title link. |
+| `url` | Overrides the DOI link on the title. |
+| `thumbnail` | Path under `/assets/`; blank shows a placeholder. |
+| `date`, `volume`, `issue`, `pages` | Recorded but not currently displayed. |
+
+All authors are always listed. APA 7 would shorten lists of 21+ to the first
+19 plus the last author, which would hide lab members on large
+collaborations, so that rule is deliberately not applied.
+
+**New member** → append an object to `src/_data/members.json`. Note the Members
+page does not read this file yet; the schema is a stub for a later pass.
 
 ## Deployment
 
