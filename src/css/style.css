@@ -7,10 +7,15 @@
   --ink: #1b2735;
   --muted: #5b6572;
   --link: #1d5bd8;
+  --band: #4177e3;
   --line: #e4e7eb;
 
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+
+  /* Left offset for full-bleed sections; keeps the PI photo and the
+     member list on the same edge. */
+  --bleed-pad: clamp(1.5rem, 9.6vw, 183px);
 
   --container: 1080px;
   --gap: 1.25rem;
@@ -159,6 +164,158 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
     border-bottom: 1px solid var(--line);
   }
   .site-nav a[aria-current="page"] { border-bottom-color: var(--link); }
+}
+
+/* ---------- page hero ---------- */
+
+/* Full-bleed banner: sits outside the centered column, so it spans the
+   viewport while its caption stays aligned to the content measure. */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: clamp(240px, 36vw, 480px);
+  overflow: hidden;
+}
+
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background-color: #9aa3ad;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark grey wash, kept light so a real photo still reads through. */
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 46, 54, 0.35);
+}
+
+.hero-placeholder {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+.hero-placeholder svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Aligned to the same edge as full-bleed section content. */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-block: 1.75rem;
+  padding-inline: var(--bleed-pad);
+}
+
+.hero-title {
+  margin: 0;
+  color: #fff;
+}
+
+/* ---------- principal investigator band ---------- */
+
+/* Runs edge to edge, so the page opts out of the centered <main>
+   and each section supplies its own .container. */
+main.full-bleed { padding-block: 0; }
+
+.pi-band {
+  background: var(--band);
+  color: #fff;
+  padding-block: 1.7rem 3.5rem;
+}
+
+/* Sits left of the centered content column, tracking the viewport edge
+   rather than the measure, and collapsing to the normal gutter on small
+   screens. */
+.pi-band-inner,
+.members-inner {
+  padding-inline: var(--bleed-pad);
+}
+
+/* Two columns: the photo occupies row 1 with the bio beside it, and the
+   caption drops to row 2 under the photo. Keeping the bio in the photo's
+   row is what lets it centre against the image itself rather than
+   against the photo-plus-caption block. */
+.pi-band-inner {
+  display: grid;
+  grid-template-columns: min(364px, 100%) minmax(0, 1fr);
+  column-gap: 3rem;
+  row-gap: 1rem;
+}
+
+.pi-photo { grid-area: 1 / 1; }
+.pi-caption { grid-area: 2 / 1; text-align: center; }
+.pi-bio { grid-area: 1 / 2; align-self: center; }
+
+/* Stack in source order: photo, caption, bio. */
+@media (max-width: 899px) {
+  .pi-band-inner { grid-template-columns: 1fr; }
+  .pi-photo,
+  .pi-caption,
+  .pi-bio { grid-area: auto; }
+}
+
+.pi-bio {
+  color: #fff;
+}
+.pi-bio p { margin: 0 0 1rem; }
+.pi-bio p:last-child { margin-bottom: 0; }
+
+.pi-photo {
+  width: 100%;
+  aspect-ratio: 6 / 7;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* The 3:4 source is taller than this 6:7 frame, so it fills the width and
+   crops evenly top and bottom. */
+.pi-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pi-name {
+  margin: 0 0 0.2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.pi-role {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* ---------- lab members ---------- */
+
+/* Reserved space below the band. Empty until member content lands;
+   min-height holds the shape so the footer does not ride up. */
+.members-list {
+  background: var(--paper);
+  padding-block: 3rem 4rem;
+  min-height: 420px;
 }
 
 /* ---------- publications ---------- */
