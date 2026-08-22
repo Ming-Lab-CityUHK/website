@@ -273,6 +273,7 @@ main.full-bleed { padding-block: 0; }
 
 .pi-bio {
   color: #fff;
+  font-size: 1.1rem;
 }
 .pi-bio p { margin: 0 0 1rem; }
 .pi-bio p:last-child { margin-bottom: 0; }
@@ -297,14 +298,14 @@ main.full-bleed { padding-block: 0; }
 
 .pi-name {
   margin: 0 0 0.2rem;
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 600;
   color: #fff;
 }
 
 .pi-role {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: #fff;
 }
 
