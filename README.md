@@ -14,39 +14,61 @@ npm run build    # one-off build into _site/
 
 ```
 src/
-├── _data/            # structured content — edit these, not the templates
-│   ├── site.json         # lab name, university, nav
-│   ├── publications.json # one object per paper (grouped by year at render)
-│   └── members.json      # PI + lab members
-├── _includes/layouts/base.njk   # shared shell: head, nav, footer
-├── css/style.css     # design tokens + styles
+├── _data/            # site content — edit these, not the templates
+│   ├── site.json         # lab name, nav, repo link
+│   ├── publications.json # one object per paper
+│   ├── members.json      # member groups
+│   └── research.json     # research directions
+├── _includes/layouts/base.njk   # shared shell: head, nav, hero, footer
+├── css/style.css     # design tokens, @font-face, all styles
 ├── js/nav.js         # mobile nav toggle
-├── assets/           # images, figures, logos
-└── *.njk             # one file per page (Home, Research, Publications, Members, Contact)
+├── assets/           # images, logos, self-hosted fonts
+└── *.njk             # one file per page
 ```
 
 ## Adding content
 
-**New paper** → append an object to `src/_data/publications.json`. Each entry
-renders as a title linking to its DOI, with an APA 7 citation beneath it,
-grouped under the right year automatically. Years run newest first; within a
-year, papers appear in the order they are listed in the file.
+### Publications
+
+Append an object to `src/_data/publications.json`. Entries render as a title
+linking to its DOI with an APA 7 citation beneath, grouped by year — newest year
+first, and within a year in the order listed in the file.
 
 | Field | Notes |
 | --- | --- |
-| `authors` | `[{ "family": "Chan", "given": "KM", "lab": true, "corresponding": true }]`. Initials may be written `KM` or `K. M.` — both render `K. M.` `lab` bolds a lab member; `corresponding` adds a superscript `#`. Use `literal` instead of `family`/`given` for group authors. |
-| `journal` | Spelled out in full, as APA 7 expects. |
+| `authors` | `[{ "family": "Chan", "given": "KM", "lab": true, "corresponding": true }]`. Initials may be written `KM` or `K. M.` — both render `K. M.` `lab` bolds a lab member; `corresponding` adds a superscript `#`. Use `literal` instead of `family`/`given` for group authors. All authors are listed, however many. |
+| `journal` | Spelled out in full. |
 | `doi` | Builds the title link. |
 | `url` | Overrides the DOI link on the title. |
-| `thumbnail` | Path under `/assets/`; blank shows a placeholder. |
-| `date`, `volume`, `issue`, `pages` | Recorded but not currently displayed. |
+| `date`, `volume`, `issue`, `pages` | Recorded but not displayed. |
 
-All authors are always listed. APA 7 would shorten lists of 21+ to the first
-19 plus the last author, which would hide lab members on large
-collaborations, so that rule is deliberately not applied.
+### Members
 
-**New member** → append an object to `src/_data/members.json`. Note the Members
-page does not read this file yet; the schema is a stub for a later pass.
+Append to a group's `people` array in `src/_data/members.json`, or add a group
+object for a new section. Each group takes one of three shapes:
+
+- **Default** — full entries: portrait with a `Joined <year>` caption, name,
+  social icons and biography.
+- **`"layout": "grid"`** — compact cards four to a row, for former members.
+- **Empty `people` array** — reserves blank space under the heading.
+
+Every field but `name` is optional and is skipped when absent, including the
+whole social icon row. Icons support `github`, `scholar`, `linkedin` and `email`.
+
+### Research
+
+Append to `topics` in `src/_data/research.json`. Each object needs a `title`, a
+`paragraphs` array (one entry per paragraph), and optionally `image` and `alt`.
+
+## Notes
+
+**Fonts** are self-hosted in `src/assets/fonts/` so no third-party request
+blocks first paint. Paths in `style.css` are relative to the stylesheet —
+Eleventy's base plugin rewrites URLs in HTML but not CSS, so absolute paths
+would break under a project page's `/repo-name/` prefix.
+
+**Page transitions** use the cross-document View Transitions API. Browsers
+without support navigate normally.
 
 ## Deployment
 

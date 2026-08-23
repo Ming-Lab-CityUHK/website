@@ -1,8 +1,7 @@
 {
   "name": "Ming Lab",
-  "university": "University Name (placeholder)",
   "description": "Placeholder description of the Ming Lab's research focus.",
-  "repo": "https://github.com/Ming-Lab-CityUHK/website",
+  "repo": "https://github.com/Ming-Lab-CityUHK",
   "nav": [
     { "label": "Home", "url": "/" },
     { "label": "Research", "url": "/research/" },
