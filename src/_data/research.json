@@ -1,0 +1,37 @@
+{
+  "_comment": "One object per research direction, rendered on /research/ in the order listed, each separated by a hairline rule. Fields: title, paragraphs (an array — one entry per paragraph), image (path under /assets/, blank shows a placeholder) and alt (describes the figure for screen readers).",
+  "topics": [
+    {
+      "title": "AI-enabled Pipelines",
+      "paragraphs": [
+        "Developing and implementing AI-enabled wet-dry integrated laboratory pipelines for cancer research to streamline multi-omics data processing and accelerate mechanistic discovery."
+      ],
+      "image": "",
+      "alt": ""
+    },
+    {
+      "title": "lncRNA–protein Complexes",
+      "paragraphs": [
+        "Characterizing the roles and regulatory mechanisms of lncRNA–protein complexes in controlling gene expression during X chromosome inactivation (XCI) and paraspeckles formation, using AI-assisted target quantification and computational modeling."
+      ],
+      "image": "",
+      "alt": ""
+    },
+    {
+      "title": "Oncohistone H2B",
+      "paragraphs": [
+        "Deciphering how H2B oncohistones drive tumorigenesis, and leveraging CRISPR-Cas9 genome editing platform for identifying therapeutic candidates."
+      ],
+      "image": "",
+      "alt": ""
+    },
+    {
+      "title": "In vivo genome-wide editing and screening platforms",
+      "paragraphs": [
+        "Developing novel genome-wide CRISPR editing and screening platforms in living animals to advance translational relevance in cancer research."
+      ],
+      "image": "",
+      "alt": ""
+    }
+  ]
+}

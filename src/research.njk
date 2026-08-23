@@ -2,5 +2,37 @@
 layout: layouts/base.njk
 title: Research
 permalink: /research/
+fullBleed: true
 ---
-<h1>Research</h1>
+<div class="container research-intro">
+  <h1>Research</h1>
+
+  <p>Building upon a strong foundation of wet-lab molecular experiments and moving from basic mechanisms towards clinical interventions, our laboratory aims to accelerate discovery by seamlessly integrating bioinformatics with advanced AI-assisted analyses. Our lab follows four major research directions.</p>
+</div>
+
+<section class="research-topics">
+  {% for topic in research.topics %}
+  <article class="topic">
+    <div class="topic-inner">
+      <div class="topic-text">
+        <h2 class="topic-title">{{ topic.title }}</h2>
+        {% for paragraph in topic.paragraphs %}
+        <p>{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+
+      <div class="topic-figure">
+        {% if topic.image %}
+        <img src="{{ topic.image }}" alt="{{ topic.alt }}">
+        {% else %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+          <path d="M3 15l5-4 4 3 3-2 6 4"></path>
+          <circle cx="8.5" cy="8.5" r="1.5"></circle>
+        </svg>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</section>

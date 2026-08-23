@@ -30,6 +30,8 @@
 
 html { scroll-behavior: smooth; }
 
+/* Column layout so the footer is pushed to the bottom of the viewport
+   on pages whose content does not fill the screen. */
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -37,7 +39,17 @@ body {
   line-height: 1.6;
   color: var(--ink);
   background: var(--paper);
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
+
+main { flex: 1 0 auto; }
+
+.site-header,
+.hero,
+.site-footer { flex: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -507,6 +519,75 @@ main.full-bleed { padding-block: 0; }
   .member-body { grid-area: auto; }
   .member-photo,
   .member-year { max-width: 306px; }
+}
+
+/* ---------- research ---------- */
+
+/* The page opts out of the centred <main>, so the intro keeps the
+   normal measure while the topic blocks run wider. */
+.research-intro { padding-block: 2.5rem 0; }
+
+.research-topics {
+  max-width: 1450px;
+  margin: 3.5rem auto 4rem;
+  padding-inline: var(--edge);
+}
+
+/* Hairline rule above every topic, and below the last, so each block is
+   bracketed by rules that overhang its content. */
+.topic { border-top: 1px solid var(--ink); }
+.topic:last-child { border-bottom: 1px solid var(--ink); }
+
+.topic-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  column-gap: 6rem;
+  align-items: start;
+  padding: 3rem 4.5rem;
+  /* Left edge follows the centred content column, so titles and text
+     line up with the page heading while the rules and figure stay
+     wider. Half the difference between the 1450px topic band and the
+     1080px container, expressed against this block's own width so it
+     holds at any viewport. */
+  padding-left: clamp(0px, calc(50% + 24px - 540px), 185px);
+}
+
+.topic-title {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+}
+
+.topic-text p { margin: 0 0 1rem; }
+.topic-text p:last-child { margin-bottom: 0; }
+
+.topic-figure {
+  aspect-ratio: 4 / 3;
+  background: #f5f7f9;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c8cfd7;
+}
+.topic-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.topic-figure svg {
+  width: 34px;
+  height: 34px;
+}
+
+@media (max-width: 899px) {
+  .topic-inner {
+    grid-template-columns: 1fr;
+    row-gap: 1.75rem;
+    padding: 2.5rem 0;
+  }
 }
 
 /* ---------- contact ---------- */

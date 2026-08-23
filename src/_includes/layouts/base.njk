@@ -45,7 +45,7 @@
         <circle cx="8.5" cy="10" r="1.5"></circle>
         <path d="M3 16.5l4.5-3.5 3.5 2.5 3-2 7 5"></path>
       </svg>
-      {{ heroLabel if heroLabel else "Group photo" }}
+      {% if heroLabel %}{{ heroLabel }}{% endif %}
     </span>
     {% endif %}
   </div>
