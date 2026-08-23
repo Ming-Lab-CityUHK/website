@@ -211,6 +211,15 @@ body {
 
 main { flex: 1 0 auto; }
 
+main.is-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: 2.5rem;
+}
+main.is-centered h1 { margin: 0; }
+
 .site-header,
 .hero,
 .site-footer { flex: none; }

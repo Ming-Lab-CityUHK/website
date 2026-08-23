@@ -54,7 +54,7 @@
 </section>
 {% endif %}
 
-<main class="{{ "full-bleed" if fullBleed else "container" }}">
+<main class="{{ "full-bleed" if fullBleed else "container" }}{{ " is-centered" if centered }}">
   {{ content | safe }}
 </main>
 
