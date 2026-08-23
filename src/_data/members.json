@@ -1,23 +1,95 @@
 {
-  "_comment": "Data stub for a later pass. 'pi' renders first in its own block; 'people' render as cards. Adding a member = adding an object here.",
-  "pi": {
-    "name": "Prof. Ming",
-    "position": "Principal Investigator",
-    "photo": "",
-    "interests": ["Placeholder interest"],
-    "projects": ["Placeholder project"],
-    "blurb": "Placeholder blurb.",
-    "links": { "github": "", "scholar": "", "email": "" }
-  },
-  "people": [
+  "_comment": "Lab members, rendered on /members/ below the PI band. Each object in `groups` becomes a heading plus a list of people; add a group (Postdocs, MSc Students, Alumni) by adding an object here. Person fields: name, joined (year only; renders as \"Joined 2023\" under the photo), photo (path under /assets/, blank shows a placeholder), interests [], projects [], blurb, and links {github, scholar, linkedin, email}. Every field except name is optional — omit or leave blank and it is skipped, including the whole icon row. A group with \"layout\": \"grid\" instead renders compact cards four to a row, using name, role, years, note and photo; a group with an empty people list reserves blank space under its heading.",
+  "groups": [
     {
-      "name": "Placeholder Member",
-      "position": "PhD Student",
-      "photo": "",
-      "interests": ["Placeholder interest"],
-      "projects": ["Placeholder project"],
-      "blurb": "Placeholder blurb / hobbies.",
-      "links": { "github": "", "scholar": "", "email": "" }
+      "title": "PhD Students",
+      "people": [
+        {
+          "name": "Member One",
+          "joined": 2023,
+          "photo": "",
+          "interests": ["Placeholder research interest", "Second placeholder interest"],
+          "projects": ["Placeholder current project"],
+          "blurb": "Placeholder personal blurb.",
+          "links": {
+            "github": "https://github.com/",
+            "scholar": "https://scholar.google.com/",
+            "linkedin": "",
+            "email": "member.one@example.com"
+          }
+        },
+        {
+          "name": "Member Two",
+          "joined": 2025,
+          "photo": "",
+          "interests": ["Placeholder research interest"],
+          "projects": ["Placeholder current project", "Second placeholder project"],
+          "blurb": "Placeholder personal blurb. This entry has no social links, so the icon row is omitted entirely.",
+          "links": {}
+        }
+      ]
+    },
+    {
+      "title": "Undergraduate Students",
+      "people": [
+        {
+          "name": "Member Three",
+          "joined": 2025,
+          "photo": "",
+          "interests": ["Placeholder research interest"],
+          "projects": ["Placeholder current project"],
+          "blurb": "Placeholder personal blurb.",
+          "links": {
+            "github": "https://github.com/",
+            "scholar": "",
+            "linkedin": "https://www.linkedin.com/",
+            "email": "member.three@example.com"
+          }
+        },
+        {
+          "name": "Member Four",
+          "joined": 2026,
+          "photo": "",
+          "interests": ["Placeholder research interest"],
+          "projects": [],
+          "blurb": "Placeholder personal blurb.",
+          "links": {}
+        }
+      ]
+    },
+    {
+      "title": "Former Lab Members",
+      "layout": "grid",
+      "people": [
+        {
+          "name": "Former Member One",
+          "role": "PhD Student",
+          "years": "2019–2023",
+          "note": "Placeholder current position",
+          "photo": ""
+        },
+        {
+          "name": "Former Member Two",
+          "role": "PhD Student",
+          "years": "2018–2022",
+          "note": "Placeholder current position",
+          "photo": ""
+        },
+        {
+          "name": "Former Member Three",
+          "role": "Research Assistant",
+          "years": "2020–2022",
+          "note": "",
+          "photo": ""
+        },
+        {
+          "name": "Former Member Four",
+          "role": "Undergraduate Student",
+          "years": "2021–2022",
+          "note": "Placeholder current position",
+          "photo": ""
+        }
+      ]
     }
   ]
 }
