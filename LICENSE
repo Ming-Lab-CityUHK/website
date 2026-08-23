@@ -1,0 +1,59 @@
+MIT License
+
+Copyright (c) 2026 Ming Lab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+================================================================================
+SCOPE OF THIS LICENSE
+================================================================================
+
+For the avoidance of doubt, "the Software" above means the source code of this
+website: its templates, stylesheets, scripts, build configuration, and the
+structured content files that drive them.
+
+The MIT License above does NOT grant any rights in the media assets contained
+in or referenced by this repository. Images, photographs, portraits, figures,
+diagrams, illustrations, logos, trademarks, and font files are expressly
+excluded from the grant and remain the property of their respective owners.
+This includes, without limitation:
+
+  * Photographs and portraits of lab members and other individuals, which
+    remain the property of the photographer or the people depicted, and may
+    not be reused, redistributed, or modified without their permission.
+
+  * The names, logos, and marks of City University of Hong Kong and its
+    Department of Biomedical Sciences, which are the property of the
+    University and are used here by permission. No right to use them is
+    granted by this license.
+
+  * Research figures and scientific imagery, which may additionally be subject
+    to publisher or journal copyright.
+
+  * Font files, which are licensed separately by their respective foundries.
+    IBM Plex is licensed under the SIL Open Font License, Version 1.1; its
+    license is included at src/assets/fonts/LICENSE.txt.
+
+Anyone wishing to reuse any excluded asset must obtain permission directly from
+the relevant rights holder.
+
+Publication metadata in src/_data/publications.json describes third-party
+scholarly works; the underlying papers are the copyright of their authors and
+publishers.

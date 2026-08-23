@@ -70,6 +70,14 @@ would break under a project page's `/repo-name/` prefix.
 **Page transitions** use the cross-document View Transitions API. Browsers
 without support navigate normally.
 
+## License
+
+The source code is MIT licensed — see [LICENSE](LICENSE). Images, photographs,
+logos, figures and font files are **excluded** from that grant and remain the
+property of their respective owners; reusing this codebase means substituting
+your own. IBM Plex is under the SIL Open Font License, included at
+[src/assets/fonts/LICENSE.txt](src/assets/fonts/LICENSE.txt).
+
 ## Deployment
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds with the
