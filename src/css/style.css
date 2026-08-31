@@ -651,6 +651,9 @@ main.full-bleed { padding-block: 0; }
   color: var(--link);
   background: #f1f4f8;
 }
+.member-links a.orcid-link:hover {
+  color: #a6ce39;
+}
 .member-links svg {
   width: 18px;
   height: 18px;

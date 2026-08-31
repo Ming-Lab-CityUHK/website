@@ -1,30 +1,58 @@
 {
-  "_comment": "Lab members, rendered on /members/ below the PI band. Each object in `groups` becomes a heading plus a list of people; add a group (Postdocs, MSc Students, Alumni) by adding an object here. Person fields: name, joined (year only; renders as \"Joined 2023\" under the photo), photo (path under /assets/, blank shows a placeholder), interests [], projects [], blurb, and links {github, scholar, linkedin, email}. Every field except name is optional — omit or leave blank and it is skipped, including the whole icon row. A group with \"layout\": \"grid\" instead renders compact cards four to a row, using name, role, years, note and photo; a group with an empty people list reserves blank space under its heading.",
+  "_comment": "Lab members, rendered on /members/ below the PI band. Each object in `groups` becomes a heading plus a list of people; add a group (Postdocs, MSc Students, Alumni) by adding an object here. Person fields: name, joined (year only; renders as \"Joined 2023\" under the photo), photo (path under /assets/, blank shows a placeholder), interests [], hobbies [], blurb (self-intro or short quote, shown under an \"In their words\" label; inline HTML such as <em> is rendered, not escaped), and links {github, orcid, linkedin, email}. Every field except name is optional — omit or leave blank and it is skipped, including the whole icon row. A group with \"layout\": \"grid\" instead renders compact cards four to a row, using name, role, years, note and photo; a group with an empty people list reserves blank space under its heading.",
   "groups": [
     {
       "title": "PhD Students",
       "people": [
         {
-          "name": "Member One",
+          "name": "Renjing Zheng",
           "joined": 2023,
-          "photo": "",
-          "interests": ["Placeholder research interest", "Second placeholder interest"],
-          "projects": ["Placeholder current project"],
-          "blurb": "Placeholder personal blurb.",
+          "photo": "/assets/r.webp",
+          "interests": ["X chromosome inactivation/CRISPR screening", "AATF and its role in mediating XCI"],
+          "hobbies": ["Milktea"],
+          "blurb": "There is more than one correct answer.",
           "links": {
-            "github": "https://github.com/",
-            "scholar": "https://scholar.google.com/",
+            "github": "",
+            "orcid": "https://orcid.org/0009-0009-1963-2319",
             "linkedin": "",
-            "email": "member.one@example.com"
+            "email": "jrzheng4-c@my.cityu.edu.hk"
           }
         },
         {
-          "name": "Member Two",
+          "name": "Katrina Lai",
+          "joined": 2023,
+          "photo": "/assets/kl.webp",
+          "interests": ["Examining the role of AATF in paraspeckle formation, function and gene regulation"],
+          "hobbies": ["Keen to learn multiple languages"],
+          "blurb": "Never judge someone until you’ve walked miles in their shoes and remember! Never ever doubt yourself, you are the best!",
+          "links": {
+            "github": "",
+            "orcid": "https://orcid.org/0009-0001-1149-2296",
+            "linkedin": "",
+            "email": "pomanlai2-c@my.cityu.edu.hk"
+          }
+        },
+        {
+          "name": "Danyi Wang",
+          "joined": 2024,
+          "photo": "/assets/dy.webp",
+          "interests": ["In-vivo CRISPR-Cas9 Functional Screening for Targets Discovery in Pancreatitis and Pancreatic Cancer"],
+          "hobbies": ["Watching TV shows"],
+          "blurb": "Everything will be okay",
+          "links": {
+            "github": "",
+            "orcid": "",
+            "linkedin": "",
+            "email": "danyiwang6-c@my.cityu.edu.hk"
+          }
+        },
+        {
+          "name": "Yuji Suzuki",
           "joined": 2025,
           "photo": "",
-          "interests": ["Placeholder research interest"],
-          "projects": ["Placeholder current project", "Second placeholder project"],
-          "blurb": "Placeholder personal blurb. This entry has no social links, so the icon row is omitted entirely.",
+          "interests": ["AI x Biomedicine for Pancreatic Cancer"],
+          "hobbies": ["Tennis", "Swimming", "Gym", "Cooking", "Coffee", "Driving", "Piano", "Traveling"],
+          "blurb": "A proudly ambitious ENTJ from Japan — future professor, <em>sooner</em> rather than later",
           "links": {}
         }
       ]
@@ -33,27 +61,32 @@
       "title": "Undergraduate Students",
       "people": [
         {
-          "name": "Member Three",
-          "joined": 2025,
-          "photo": "",
-          "interests": ["Placeholder research interest"],
-          "projects": ["Placeholder current project"],
-          "blurb": "Placeholder personal blurb.",
+          "name": "Fabian Pino Hormazabal",
+          "joined": 2026,
+          "photo": "/assets/fp.webp",
+          "interests": ["Onco-neural signaling", "Drug testing", "Computational biology"],
+          "hobbies": ["Volleyball", "Photography", "Games", "Yapping", "Drinking boba"],
+          "blurb": "I’m not sure of what to put here yet so I’ll leave it like this for now... why is everyone’s about me so inspirational?",
           "links": {
-            "github": "https://github.com/",
-            "scholar": "",
-            "linkedin": "https://www.linkedin.com/",
-            "email": "member.three@example.com"
+            "github": "",
+            "orcid": "",
+            "linkedin": "https://www.linkedin.com/in/fabian-ph",
+            "email": "fabiapino2-c@my.cityu.edu.hk"
           }
         },
         {
-          "name": "Member Four",
+          "name": "Joshua Michael Pascal Dsouza",
           "joined": 2026,
-          "photo": "",
-          "interests": ["Placeholder research interest"],
-          "projects": [],
-          "blurb": "Placeholder personal blurb.",
-          "links": {}
+          "photo": "/assets/js.webp",
+          "interests": ["Cancer Biology", "In-vivo genome-wide CRISPR editing and Digital Pathology"],
+          "hobbies": ["Badminton", "Movies/Shows", "Cooking", "Gaming"],
+          "blurb": "There is no prize to perfection, only an end to pursuit",
+          "links": {
+            "github": "https://github.com/Joshua-6984",
+            "orcid": "",
+            "linkedin": "https://www.linkedin.com/in/joshua-d-souza-b29845323",
+            "email": "joshua29.dsouza@gmail.com"
+          }
         }
       ]
     },
