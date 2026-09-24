@@ -133,6 +133,7 @@
   --muted: #5b6572;
   --link: #1d5bd8;
   --band: #4177e3;
+  --band-deep: #070b14;
   --line: #e4e7eb;
 
   --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -436,8 +437,12 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
    and each section supplies its own .container. */
 main.full-bleed { padding-block: 0; }
 
+/* Blue fading to near-black, lit from the top left. The end stops sit
+   past the edges, as if the gradient ran on beyond the band. The solid colour
+   stays underneath for browsers without gradient support. */
 .pi-band {
   background: var(--band);
+  background: linear-gradient(135deg, var(--band) -15%, #24489a 45%, var(--band-deep) 115%);
   color: #fff;
   padding-block: 1.7rem 3.5rem;
 }
