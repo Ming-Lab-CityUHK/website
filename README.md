@@ -1,5 +1,11 @@
 # Ming Lab Website
 
+<p align="center">
+  <a href="https://ming-lab-cityuhk.github.io/website/">
+    <img alt="Website" src="https://img.shields.io/badge/website-live-brightgreen.svg">
+  </a>
+</p>
+
 Static site for the Ming Lab, built with [Eleventy](https://www.11ty.dev/) and deployed to GitHub Pages via GitHub Actions.
 
 ## Local development
