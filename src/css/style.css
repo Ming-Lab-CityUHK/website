@@ -838,7 +838,7 @@ main.full-bleed { padding-block: 0; }
 
 .pub-entry {
   display: grid;
-  grid-template-columns: 132px 1fr;
+  grid-template-columns: 152px 1fr;
   gap: 1.5rem;
   padding-block: 1.6rem;
   border-bottom: 1px solid var(--line);
@@ -854,6 +854,10 @@ main.full-bleed { padding-block: 0; }
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+.pub-figure picture {
+  width: 100%;
+  height: 100%;
 }
 .pub-figure img {
   width: 100%;

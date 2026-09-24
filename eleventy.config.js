@@ -67,6 +67,12 @@ function byYear(papers = []) {
     .map(([year, items]) => ({ year, items }));
 }
 
+// "/assets/x.webp" -> "/assets/x@1x.webp", the pre-scaled copy for that
+// pixel density (see the @1x/@2x/@3x files next to each thumbnail).
+function atScale(src, scale) {
+  return src.replace(/(\.\w+)$/, `@${scale}$1`);
+}
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
@@ -74,6 +80,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("apaAuthors", apaAuthors);
   eleventyConfig.addFilter("byYear", byYear);
+  eleventyConfig.addFilter("atScale", atScale);
 
   // Rewrites root-relative URLs to honor --pathprefix, so the same
   // templates work at /repo-name/ (project page) and / (custom domain).
