@@ -824,6 +824,24 @@ main.full-bleed { padding-block: 0; }
 /* Matches the page title. */
 .contact-heading { font-size: var(--title-size); }
 
+/* Blue-to-navy gradient clipped to the letters, running diagonally from
+   the top left to the bottom right. Kept separate from the PI band's gradient so
+   each can be tuned on its own.
+   Shrink-wrapped to the words. Plain ink where text clipping is
+   unsupported. */
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .contact-heading--gradient {
+    width: fit-content;
+    background: linear-gradient(to bottom right, #4177e3 25%, #24489a 55%, #0b1428 85%);
+    /* One tile per line, so a heading that wraps shades each line alike
+       instead of stretching one gradient across both. */
+    background-size: 100% 1lh;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 /* Address beside its map, vertically centred against it; stacks on
    narrow screens. */
 .contact-row {
