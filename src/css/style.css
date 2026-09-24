@@ -528,6 +528,11 @@ main.full-bleed { padding-block: 0; }
 
 .member-group + .member-group { margin-top: 4.5rem; }
 
+/* Sub-headings (PhD, MSc) inside a group share the group heading's type. */
+.member-subgroup { margin-top: 3.5rem; }
+.member-subgroup + .member-subgroup { margin-top: 4.5rem; }
+.member-subgroup .former-list { margin-top: 3.5rem; }
+
 /* Matches the section's top padding, so the heading sits evenly spaced. */
 .member-list {
   list-style: none;
@@ -551,12 +556,16 @@ main.full-bleed { padding-block: 0; }
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: 6.5rem;
+  column-gap: calc(2.5rem + 15px);
   row-gap: 3rem;
   max-width: 1250px;
 }
 
+/* Slightly narrower than the card, so the text below runs wider than
+   the photo. */
 .former-photo {
+  width: 95.5%;
+  margin-inline: auto;
   aspect-ratio: 4 / 5;
   background: #f5f7f9;
   border: 1px solid var(--line);
@@ -593,6 +602,12 @@ main.full-bleed { padding-block: 0; }
   margin: 0.15rem 0 0;
   font-size: 0.92rem;
   color: var(--muted);
+}
+
+/* Current position, underlined to set it apart from the awards above. */
+.former-note {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 @media (max-width: 899px) {
@@ -686,6 +701,26 @@ main.full-bleed { padding-block: 0; }
   margin: 0;
   text-align: center;
 }
+.member-year p { margin: 0; }
+.member-year .member-programme {
+  margin-top: 0.5rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+/* Awards: one per line, under the joined year or the former-member years. */
+.member-awards {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.member-awards li + li { margin-top: 0.3rem; }
+/* On former-member cards, awards sit in line with the other meta rows. */
+.former-body .member-awards { margin-top: 0.15rem; line-height: inherit; }
+.former-body .member-awards li + li { margin-top: 0.15rem; }
 
 .member-field { margin: 0 0 0.9rem; }
 .member-field:last-child { margin-bottom: 0; }

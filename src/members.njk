@@ -5,6 +5,37 @@ permalink: /members/
 hero: true
 fullBleed: true
 ---
+{% macro formerGrid(people) %}
+  <ul class="former-list">
+    {% for person in people %}
+    <li class="former">
+      <div class="former-photo">
+        {% if person.photo %}
+        <img src="{{ person.photo }}" alt="{{ person.name }}">
+        {% else %}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <circle cx="12" cy="8.5" r="3.5"></circle>
+          <path d="M4.5 20a7.5 7.5 0 0 1 15 0"></path>
+        </svg>
+        {% endif %}
+      </div>
+      <div class="former-body">
+        <h3 class="former-name">{{ person.name }}</h3>
+        {% if person.role %}<p class="former-meta">{{ person.role }}</p>{% endif %}
+        {% if person.years %}<p class="former-meta">{{ person.years }}</p>{% endif %}
+        {% if person.programme %}<p class="former-meta">{{ person.programme }}</p>{% endif %}
+        {% if person.awards and person.awards.length %}
+        <ul class="member-awards">
+          {% for award in person.awards %}<li>{{ award }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+        {% if person.note %}<p class="former-meta former-note">{{ person.note }}</p>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
 <section class="pi-band">
   <div class="pi-band-inner">
     <div class="pi-photo">
@@ -32,32 +63,19 @@ fullBleed: true
     <section class="member-group">
       <h2 class="members-heading">{{ group.title }}</h2>
 
-      {% if not group.people.length %}
+      {% if not group.subgroups and not group.people.length %}
       <div class="member-list-empty"></div>
 
+      {% elif group.subgroups %}
+      {% for sub in group.subgroups %}
+      <section class="member-subgroup">
+        <h3 class="members-heading">{{ sub.title }}</h3>
+        {{ formerGrid(sub.people) }}
+      </section>
+      {% endfor %}
+
       {% elif group.layout == "grid" %}
-      <ul class="former-list">
-        {% for person in group.people %}
-        <li class="former">
-          <div class="former-photo">
-            {% if person.photo %}
-            <img src="{{ person.photo }}" alt="{{ person.name }}">
-            {% else %}
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-              <circle cx="12" cy="8.5" r="3.5"></circle>
-              <path d="M4.5 20a7.5 7.5 0 0 1 15 0"></path>
-            </svg>
-            {% endif %}
-          </div>
-          <div class="former-body">
-            <h3 class="former-name">{{ person.name }}</h3>
-            {% if person.role %}<p class="former-meta">{{ person.role }}</p>{% endif %}
-            {% if person.years %}<p class="former-meta">{{ person.years }}</p>{% endif %}
-            {% if person.note %}<p class="former-meta">{{ person.note }}</p>{% endif %}
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
+      {{ formerGrid(group.people) }}
 
       {% else %}
       <ul class="member-list">
@@ -74,8 +92,16 @@ fullBleed: true
             {% endif %}
           </div>
 
-          {% if person.joined %}
-          <p class="member-year">Joined {{ person.joined }}</p>
+          {% if person.joined or person.programme or (person.awards and person.awards.length) %}
+          <div class="member-year">
+            {% if person.joined %}<p>Joined {{ person.joined }}</p>{% endif %}
+            {% if person.programme %}<p class="member-programme">{{ person.programme }}</p>{% endif %}
+            {% if person.awards and person.awards.length %}
+            <ul class="member-awards">
+              {% for award in person.awards %}<li>{{ award }}</li>{% endfor %}
+            </ul>
+            {% endif %}
+          </div>
           {% endif %}
 
           <div class="member-body">
