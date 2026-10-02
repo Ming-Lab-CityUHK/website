@@ -9,13 +9,13 @@ fullBleed: true
   <div class="home-hero-inner">
     <div>
       <p class="home-label">Ming Lab · Department of Biomedical Sciences</p>
-      <h1>Ming Lab</h1>
+      <h1>From cancer mechanisms to advanced technology.</h1>
       <p class="home-lede">[Lab introduction placeholder]</p>
     </div>
 
     <aside class="home-summary" aria-label="Lab summary">
       <p>City University of Hong Kong</p>
-      <p>Cancer biology · Epigenetics · Spatial analysis · Digital pathology</p>
+      <p>Cancer Biology, Epigenetics, CRISPR Technology, Cancer Neuroscience, Spatial Biology, Digital Pathology</p>
       <a href="/research/">Research</a>
       <a href="/members/">Explore our Team</a>
       <a href="/contact/">Contact</a>
@@ -30,9 +30,8 @@ fullBleed: true
     </div>
     <div class="home-feature-copy">
       <p class="home-number">01</p>
-      <h2>Explore our Team</h2>
-      <p>Meet the people of Ming Lab, including our principal investigator, postgraduate students, research staff and alumni.</p>
-      <p class="home-more"><a href="/members/">View team members</a></p>
+      <h2>[Section placeholder]</h2>
+      <p>[Content placeholder]</p>
     </div>
   </div>
 </section>
@@ -40,16 +39,8 @@ fullBleed: true
 <section class="home-section">
   <div class="home-section-inner">
     <p class="home-number">02</p>
-    <h2>Research directions</h2>
-
-    <div class="home-research-list">
-      {% for topic in research.topics %}
-      <article class="home-research-item">
-        <h3>{{ topic.title }}</h3>
-        <p>{{ topic.paragraphs[0] }}</p>
-      </article>
-      {% endfor %}
-    </div>
+    <h2>[Section placeholder]</h2>
+    <p class="home-placeholder-copy">[Content placeholder]</p>
   </div>
 </section>
 
@@ -62,9 +53,7 @@ fullBleed: true
       {% for paper in publications.papers %}
       {% if paper.doi in [
         "10.1126/sciadv.adx4982",
-        "10.1016/j.celrep.2025.116596",
-        "10.1038/s41392-020-00219-2",
-        "10.1038/s41392-020-0131-0"
+        "10.1016/j.celrep.2025.116596"
       ] %}
       {% set link = paper.url if paper.url else "https://doi.org/" + paper.doi %}
       <article class="home-publication">
