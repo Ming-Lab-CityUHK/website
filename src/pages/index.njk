@@ -9,8 +9,8 @@ fullBleed: true
   <div class="home-hero-inner">
     <div>
       <p class="home-label">Ming Lab · Department of Biomedical Sciences</p>
-      <h1>From cancer mechanisms to advanced technology.</h1>
-      <p class="home-lede">[Lab introduction placeholder]</p>
+      <h1>From cancer mechanisms to advanced technology</h1>
+      <p class="home-lede">We investigate how genetic, epigenetic and spatial tissue-level mechanisms shape cancer progression, combining wet-lab molecular experiments with bioinformatics and AI-assisted analysis.</p>
     </div>
 
     <aside class="home-summary" aria-label="Lab summary">
@@ -25,9 +25,6 @@ fullBleed: true
 
 <section class="home-feature">
   <div class="home-feature-inner">
-    <div class="home-image-placeholder" aria-label="Group photo placeholder">
-      <span>Group photo placeholder</span>
-    </div>
     <div class="home-feature-copy">
       <p class="home-number">01</p>
       <h2>[Section placeholder]</h2>
@@ -47,13 +44,14 @@ fullBleed: true
 <section class="home-section">
   <div class="home-section-inner">
     <p class="home-number">03</p>
-    <h2>Recent original work from the lab</h2>
+    <h2>Selected Publications</h2>
 
     <div class="home-publication-list">
       {% for paper in publications.papers %}
       {% if paper.doi in [
         "10.1126/sciadv.adx4982",
-        "10.1016/j.celrep.2025.116596"
+        "10.1016/j.celrep.2025.116596",
+        "10.1038/s41392-020-00219-2"
       ] %}
       {% set link = paper.url if paper.url else "https://doi.org/" + paper.doi %}
       <article class="home-publication">
@@ -71,9 +69,14 @@ fullBleed: true
 
 <section class="home-contact">
   <div class="home-section-inner home-contact-inner">
-    <p class="home-number">04</p>
-    <h2>Explore our Team</h2>
-    <p>Learn more about the people, research interests and alumni of Ming Lab.</p>
-    <a href="/members/">Team members</a>
+    <div class="home-image-placeholder" aria-label="Group photo placeholder">
+      <span>Group photo placeholder</span>
+    </div>
+    <div>
+      <p class="home-number">04</p>
+      <h2>Explore our Team</h2>
+      <p>Learn more about the people, research interests and alumni of Ming Lab.</p>
+      <a href="/members/">Team members</a>
+    </div>
   </div>
 </section>

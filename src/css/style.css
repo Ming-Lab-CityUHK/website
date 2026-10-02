@@ -341,10 +341,7 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 }
 
 .home-feature-inner {
-  display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: center;
+  max-width: var(--container);
 }
 
 .home-image-placeholder {
@@ -442,7 +439,10 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 }
 
 .home-contact-inner {
-  max-width: 760px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
 }
 
 .home-contact a {
@@ -454,7 +454,7 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 
 @media (max-width: 899px) {
   .home-hero-inner,
-  .home-feature-inner,
+  .home-contact-inner,
   .home-research-item,
   .home-publication {
     grid-template-columns: 1fr;
