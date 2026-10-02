@@ -347,18 +347,19 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
   align-items: center;
 }
 
-.home-feature-image {
-  margin: 0;
+.home-image-placeholder {
   border: 1px solid var(--line);
   border-radius: 4px;
-  overflow: hidden;
-}
-
-.home-feature-image img {
-  display: block;
-  width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  background: #f5f7f9;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .home-feature-copy h2,

@@ -9,15 +9,15 @@ fullBleed: true
   <div class="home-hero-inner">
     <div>
       <p class="home-label">Ming Lab · Department of Biomedical Sciences</p>
-      <h1>From cancer mechanisms to spatial tumor-nerve biology.</h1>
-      <p class="home-lede">We investigate how genetic, epigenetic and spatial tissue-level mechanisms shape cancer progression, combining wet-lab molecular experiments with bioinformatics and AI-assisted analysis.</p>
+      <h1>Ming Lab</h1>
+      <p class="home-lede">[Lab introduction placeholder]</p>
     </div>
 
     <aside class="home-summary" aria-label="Lab summary">
       <p>City University of Hong Kong</p>
       <p>Cancer biology · Epigenetics · Spatial analysis · Digital pathology</p>
       <a href="/research/">Research</a>
-      <a href="/members/">Members</a>
+      <a href="/members/">Explore our Team</a>
       <a href="/contact/">Contact</a>
     </aside>
   </div>
@@ -25,13 +25,14 @@ fullBleed: true
 
 <section class="home-feature">
   <div class="home-feature-inner">
-    <figure class="home-feature-image">
-      <img src="/assets/research/ai.webp" alt="Tissue section colour-coded into regions by AI-assisted analysis">
-    </figure>
+    <div class="home-image-placeholder" aria-label="Group photo placeholder">
+      <span>Group photo placeholder</span>
+    </div>
     <div class="home-feature-copy">
       <p class="home-number">01</p>
-      <h2>Wet-dry cancer research with a translational focus</h2>
-      <p>Building upon molecular experiments and moving from basic mechanisms toward clinical interventions, our laboratory integrates bioinformatics, spatial biology and advanced AI-assisted analyses to accelerate discovery.</p>
+      <h2>Explore our Team</h2>
+      <p>Meet the people of Ming Lab, including our principal investigator, postgraduate students, research staff and alumni.</p>
+      <p class="home-more"><a href="/members/">View team members</a></p>
     </div>
   </div>
 </section>
@@ -55,11 +56,16 @@ fullBleed: true
 <section class="home-section">
   <div class="home-section-inner">
     <p class="home-number">03</p>
-    <h2>Selected publications</h2>
+    <h2>Recent original work from the lab</h2>
 
     <div class="home-publication-list">
       {% for paper in publications.papers %}
-      {% if loop.index <= 3 %}
+      {% if paper.doi in [
+        "10.1126/sciadv.adx4982",
+        "10.1016/j.celrep.2025.116596",
+        "10.1038/s41392-020-00219-2",
+        "10.1038/s41392-020-0131-0"
+      ] %}
       {% set link = paper.url if paper.url else "https://doi.org/" + paper.doi %}
       <article class="home-publication">
         <p class="home-publication-year">{{ paper.year }}</p>
@@ -77,8 +83,8 @@ fullBleed: true
 <section class="home-contact">
   <div class="home-section-inner home-contact-inner">
     <p class="home-number">04</p>
-    <h2>Join the lab</h2>
-    <p>We welcome postdoctoral fellows, research assistants and postgraduate students interested in molecular cancer biology, spatial analysis, AI-assisted pathology and translational discovery.</p>
-    <a href="/contact/">Contact Ming Lab</a>
+    <h2>Explore our Team</h2>
+    <p>Learn more about the people, research interests and alumni of Ming Lab.</p>
+    <a href="/members/">Team members</a>
   </div>
 </section>
