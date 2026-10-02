@@ -7,59 +7,59 @@ fullBleed: true
 ---
 <section class="home-hero">
   <div class="home-hero-inner">
-    <div class="home-hero-copy">
-      <p class="eyebrow">Ming Lab · City University of Hong Kong</p>
-      <h1>Decoding cancer mechanisms from chromatin to spatial tumor ecology.</h1>
-      <p class="home-hero-lede">We combine wet-lab molecular experiments, multi-omics, spatial biology and AI-assisted analysis to move from basic cancer mechanisms toward clinically useful interventions.</p>
-      <div class="home-actions" aria-label="Primary">
-        <a class="button button-primary" href="/research/">Explore Research</a>
-        <a class="button button-secondary" href="/contact/">Join the Lab</a>
-      </div>
+    <div>
+      <p class="home-label">Ming Lab · Department of Biomedical Sciences</p>
+      <h1>From cancer mechanisms to spatial tumor-nerve biology.</h1>
+      <p class="home-lede">We investigate how genetic, epigenetic and spatial tissue-level mechanisms shape cancer progression, combining wet-lab molecular experiments with bioinformatics and AI-assisted analysis.</p>
     </div>
 
-    <figure class="home-hero-figure">
-      <img src="/assets/research/ai.webp" alt="Tissue section colour-coded into regions by AI-assisted analysis">
-      <figcaption>AI-assisted spatial analysis for cancer research</figcaption>
-    </figure>
+    <aside class="home-summary" aria-label="Lab summary">
+      <p>City University of Hong Kong</p>
+      <p>Cancer biology · Epigenetics · Spatial analysis · Digital pathology</p>
+      <a href="/research/">Research</a>
+      <a href="/members/">Members</a>
+      <a href="/contact/">Contact</a>
+    </aside>
   </div>
 </section>
 
-<section class="home-section home-section--intro">
-  <div class="home-section-inner">
-    <p class="home-statement">Our laboratory studies how genetic, epigenetic and spatial tissue-level mechanisms shape cancer progression, with a growing focus on tumor-nerve interactions and digital pathology for nerve invasion.</p>
+<section class="home-feature">
+  <div class="home-feature-inner">
+    <figure class="home-feature-image">
+      <img src="/assets/research/ai.webp" alt="Tissue section colour-coded into regions by AI-assisted analysis">
+    </figure>
+    <div class="home-feature-copy">
+      <p class="home-number">01</p>
+      <h2>Wet-dry cancer research with a translational focus</h2>
+      <p>Building upon molecular experiments and moving from basic mechanisms toward clinical interventions, our laboratory integrates bioinformatics, spatial biology and advanced AI-assisted analyses to accelerate discovery.</p>
+    </div>
   </div>
 </section>
 
 <section class="home-section">
   <div class="home-section-inner">
-    <div class="section-kicker">
-      <p class="eyebrow">Research</p>
-      <h2>Five directions, one translational thread</h2>
-    </div>
+    <p class="home-number">02</p>
+    <h2>Research directions</h2>
 
-    <div class="home-research-grid">
+    <div class="home-research-list">
       {% for topic in research.topics %}
-      <article class="home-research-card">
+      <article class="home-research-item">
         <h3>{{ topic.title }}</h3>
         <p>{{ topic.paragraphs[0] }}</p>
       </article>
       {% endfor %}
     </div>
-
-    <p class="home-link-row"><a href="/research/">View all research directions</a></p>
   </div>
 </section>
 
-<section class="home-section home-section--muted">
+<section class="home-section">
   <div class="home-section-inner">
-    <div class="section-kicker">
-      <p class="eyebrow">Selected Publications</p>
-      <h2>Recent work from the lab</h2>
-    </div>
+    <p class="home-number">03</p>
+    <h2>Selected publications</h2>
 
     <div class="home-publication-list">
       {% for paper in publications.papers %}
-      {% if loop.index <= 2 %}
+      {% if loop.index <= 3 %}
       {% set link = paper.url if paper.url else "https://doi.org/" + paper.doi %}
       <article class="home-publication">
         <p class="home-publication-year">{{ paper.year }}</p>
@@ -70,17 +70,15 @@ fullBleed: true
       {% endfor %}
     </div>
 
-    <p class="home-link-row"><a href="/publications/">Browse publications</a></p>
+    <p class="home-more"><a href="/publications/">All publications</a></p>
   </div>
 </section>
 
-<section class="home-section home-join">
-  <div class="home-section-inner home-join-inner">
-    <div>
-      <p class="eyebrow">Opportunities</p>
-      <h2>Join a wet-dry cancer biology lab</h2>
-    </div>
-    <p>We welcome motivated postdoctoral fellows, research assistants and postgraduate students interested in molecular cancer biology, spatial analysis, AI-assisted pathology and translational discovery.</p>
-    <a class="button button-primary" href="/contact/">Contact Us</a>
+<section class="home-contact">
+  <div class="home-section-inner home-contact-inner">
+    <p class="home-number">04</p>
+    <h2>Join the lab</h2>
+    <p>We welcome postdoctoral fellows, research assistants and postgraduate students interested in molecular cancer biology, spatial analysis, AI-assisted pathology and translational discovery.</p>
+    <a href="/contact/">Contact Ming Lab</a>
   </div>
 </section>
