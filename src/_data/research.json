@@ -2,12 +2,20 @@
   "_comment": "One object per research direction, rendered on /research/ in the order listed, each separated by a hairline rule. Fields: title, paragraphs (an array — one entry per paragraph), image (path under /assets/, blank shows a placeholder) and alt (describes the figure for screen readers).",
   "topics": [
     {
-      "title": "AI-enabled Pipelines",
+      "title": "Spatial Cancer Neuroscience",
       "paragraphs": [
-        "Developing and implementing AI-enabled wet-dry integrated laboratory pipelines for cancer research to streamline multi-omics data processing and accelerate mechanistic discovery."
+        "Investigating spatial tumor-nerve interactions, particularly nerve invasion in human clinical samples for novel therapeutic seeds."
       ],
       "image": "/assets/research/ai.webp",
       "alt": "Tissue section colour-coded into regions by AI-assisted analysis"
+    },
+    {
+      "title": "Digital Pathology for Nerve Invasion",
+      "paragraphs": [
+        "Developing a deep learning-based digital pathology tool for automated diagnosis of nerve invasion and prognostic assessment in cancer patients."
+      ],
+      "image": "",
+      "alt": ""
     },
     {
       "title": "lncRNA–protein Complexes",
