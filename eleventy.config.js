@@ -74,6 +74,8 @@ function atScale(src, scale) {
 }
 
 export default function (eleventyConfig) {
+  eleventyConfig.ignores.add("**/._*");
+
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/assets");
