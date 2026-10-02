@@ -1,7 +1,11 @@
 {
   "name": "Ming Lab",
-  "description": "Placeholder description of the Ming Lab's research focus.",
+  "description": "Ming Lab at City University of Hong Kong studies cancer mechanisms, spatial tumor-nerve interactions, epigenetics and AI-assisted multi-omics approaches for translational cancer research.",
+  "url": "https://ming-lab-cityuhk.github.io/website",
+  "image": "/assets/bms-logo.png",
   "repo": "https://github.com/Ming-Lab-CityUHK",
+  "department": "Department of Biomedical Sciences, City University of Hong Kong",
+  "email": "ming.chan@cityu.edu.hk",
   "nav": [
     { "label": "Home", "url": "/" },
     { "label": "Research", "url": "/research/" },

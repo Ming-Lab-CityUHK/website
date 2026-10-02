@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prestart": "find src -type f -name '._*' -delete",
     "start": "eleventy --serve",
+    "prebuild": "find src -type f -name '._*' -delete",
     "build": "eleventy"
   },
   "devDependencies": {
