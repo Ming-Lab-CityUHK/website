@@ -1,0 +1,21 @@
+{
+  "_comment": "One object per news item, newest first. The homepage shows the first three. Fields: date (YYYY-MM-DD), title, excerpt (a sentence or two), image (path under /assets/, blank shows a placeholder), alt (describes the image for screen readers) and url (optional link to the full story; leave blank for none).",
+  "items": [
+    {
+      "date": "2026-10-12",
+      "title": "Research led by Prof. Ming Chan reveals modulating chromatin dynamics of H2B mutations, shedding light on novel targeted therapy of breast cancer",
+      "excerpt": "A research team led by Prof. Kui-ming Chan from CityUHK BMS discovered that H2BE113K, a missense H2B mutation, promotes colony formation and lung metastasis of breast cancer.",
+      "image": "/assets/news/mc_cityuhk_news.webp",
+      "alt": "Prof. Ming Chan in a lab coat and gloves holding up a pipette and culture dish",
+      "url": "https://www.cityu.edu.hk/media/news/2026/10/12/cityuhk-research-reveals-modulating-chromatin-dynamics-of-h2b-mutations"
+    },
+    {
+      "date": "2026-07-19",
+      "title": "Breakthrough studies from Prof. Kui Ming Chan’s team reveal how histone mutations drive cancer — and how they can be targeted",
+      "excerpt": "New studies by Prof. Kui Ming Chan’s research team reveal how cancer-causing histone mutations drive cancer and expose therapeutic vulnerabilities for precision therapies.",
+      "image": "/assets/news/20260719.webp",
+      "alt": "Portraits of five research team members above the Science Advances and Cell Reports papers on histone H2B mutations",
+      "url": "https://www.cityu.edu.hk/bms/broadcast/news/20260719-mc-research.htm"
+    }
+  ]
+}

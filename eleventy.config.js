@@ -67,6 +67,17 @@ function byYear(papers = []) {
     .map(([year, items]) => ({ year, items }));
 }
 
+// "2026-10-12" -> "12 October 2026". Parsed as UTC so the day never
+// shifts with the build machine's time zone.
+function readableDate(iso) {
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC"
+  });
+}
+
 // "/assets/x.webp" -> "/assets/x@1x.webp", the pre-scaled copy for that
 // pixel density (see the @1x/@2x/@3x files next to each thumbnail).
 function atScale(src, scale) {
@@ -83,6 +94,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("apaAuthors", apaAuthors);
   eleventyConfig.addFilter("byYear", byYear);
   eleventyConfig.addFilter("atScale", atScale);
+  eleventyConfig.addFilter("readableDate", readableDate);
 
   // Rewrites root-relative URLs to honor --pathprefix, so the same
   // templates work at /repo-name/ (project page) and / (custom domain).

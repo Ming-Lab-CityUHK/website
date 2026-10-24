@@ -29,8 +29,27 @@ fullBleed: true
   <div class="home-feature-inner">
     <div class="home-feature-copy">
       <p class="home-number">01</p>
-      <h2>[Section placeholder]</h2>
-      <p>[Content placeholder]</p>
+      <h2>Latest News</h2>
+    </div>
+
+    <div class="home-news-list">
+      {% for item in news.items %}
+      {% if loop.index <= 3 %}
+      <article class="home-news">
+        {% if item.image %}
+        <img class="home-news-media" src="{{ item.image }}" alt="{{ item.alt }}" loading="lazy">
+        {% else %}
+        <div class="home-news-media home-image-placeholder"><span>Image placeholder</span></div>
+        {% endif %}
+        <div class="home-news-body">
+          <h3>{{ item.title }}</h3>
+          <p class="home-news-date"><time datetime="{{ item.date }}">{{ item.date | readableDate }}</time></p>
+          <p class="home-news-excerpt">{{ item.excerpt }}</p>
+          {% if item.url %}<a class="home-news-more" href="{{ item.url }}" target="_blank" rel="noopener">Learn more</a>{% endif %}
+        </div>
+      </article>
+      {% endif %}
+      {% endfor %}
     </div>
   </div>
 </section>

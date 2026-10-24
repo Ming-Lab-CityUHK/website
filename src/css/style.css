@@ -373,8 +373,10 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
   padding-inline: var(--edge);
 }
 
+/* Wider than the other sections, matching the hero, so the news cards'
+   images and copy get more room. */
 .home-feature-inner {
-  max-width: var(--container);
+  max-width: 1280px;
 }
 
 .home-image-placeholder {
@@ -459,6 +461,80 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
   text-decoration-color: currentColor;
 }
 
+/* News cards: image left, copy right; they stack below 900px. */
+.home-news-list {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.home-news {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #ebebeb;
+  overflow: hidden;
+}
+
+/* Every image gets the same 16:10 frame (the collage's own shape), so
+   other shapes are cropped to match. Centred when the copy runs taller. */
+.home-news-media {
+  --news-inset: clamp(1.25rem, 3vw, 2rem);
+  display: block;
+  width: calc(100% - var(--news-inset));
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  align-self: center;
+  margin: calc(var(--news-inset) * 0.42) 0 calc(var(--news-inset) * 0.42) var(--news-inset);
+}
+
+.home-news-media.home-image-placeholder {
+  display: flex;
+  align-self: stretch;
+  min-height: 220px;
+  aspect-ratio: auto;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+}
+
+.home-news-body {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.home-news h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.home-news-date {
+  margin: 0.9rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.home-news-excerpt {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+.home-news-more {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
 .home-more {
   margin: 1.25rem 0 0;
   font-family: var(--font-mono);
@@ -489,12 +565,24 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
   .home-hero-inner,
   .home-contact-inner,
   .home-research-item,
-  .home-publication {
+  .home-publication,
+  .home-news {
     grid-template-columns: 1fr;
   }
 
   .home-hero-inner {
     align-items: start;
+  }
+
+  .home-news-media {
+    --news-inset: 0px;
+  }
+
+  .home-news-media.home-image-placeholder {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   /* The copy stacks full-width here, so darken the whole frame evenly. */
