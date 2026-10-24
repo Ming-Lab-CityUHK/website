@@ -266,10 +266,43 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 
 /* ---------- homepage ---------- */
 
+/* Lab footage fills the hero; a left-weighted scrim keeps the copy legible
+   while leaving the right side of the frame (the bench work) visible. */
 .home-hero {
-  background: #faf8f3;
-  border-bottom: 1px solid var(--line);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--band-deep);
+  color: #fff;
 }
+
+.home-hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgb(7 11 20 / 0.82) 0%, rgb(7 11 20 / 0.55) 55%, rgb(7 11 20 / 0.25) 100%),
+    linear-gradient(0deg, rgb(7 11 20 / 0.5) 0%, transparent 45%);
+}
+
+.home-hero .home-label,
+.home-hero .home-lede,
+.home-hero .home-summary p { color: rgb(255 255 255 / 0.78); }
+
+.home-hero .home-summary { border-top-color: #fff; }
+.home-hero .home-summary p:first-child { color: #fff; }
+.home-hero .home-summary a { color: #fff; }
+.home-hero a:focus-visible { outline-color: #fff; }
 
 .home-hero-inner {
   max-width: 1280px;
@@ -462,6 +495,11 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 
   .home-hero-inner {
     align-items: start;
+  }
+
+  /* The copy stacks full-width here, so darken the whole frame evenly. */
+  .home-hero::before {
+    background: rgb(7 11 20 / 0.68);
   }
 }
 
