@@ -679,6 +679,14 @@ ol.home-publication-list,
 }
 
 @media (max-width: 719px) {
+  /* The header's view-transition-name makes it its own stacking context,
+     so lift the whole header or a later positioned block (the Members
+     hero) paints over the open dropdown. */
+  .site-header {
+    position: relative;
+    z-index: 20;
+  }
+
   .nav-toggle { display: flex; }
 
   .site-nav {
@@ -1089,14 +1097,39 @@ main.full-bleed { padding-block: 0; }
   color: var(--muted);
 }
 
-/* Stack in source order: photo, year, name, biography. */
+/* One centred column: photo, then name (with links), then year and
+   awards, then the biography at full width. The body box is dissolved so
+   its name and biography can sit either side of the year. */
 @media (max-width: 899px) {
-  .member { grid-template-columns: 1fr; }
+  .member {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
   .member-photo,
-  .member-year,
-  .member-body { grid-area: auto; }
-  .member-photo,
-  .member-year { max-width: 306px; }
+  .member-year { grid-area: auto; }
+  .member-body { display: contents; }
+
+  .member-photo {
+    order: 1;
+    width: 100%;
+    max-width: 306px;
+  }
+  /* Name and its link icons stay on one line, centred as a group. */
+  .member-header {
+    order: 2;
+    justify-content: center;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .member-year {
+    order: 3;
+    max-width: 306px;
+  }
+  .member-bio {
+    order: 4;
+    justify-self: stretch;
+    margin-top: 0.6rem;
+  }
 }
 
 /* ---------- research ---------- */
