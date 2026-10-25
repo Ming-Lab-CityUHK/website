@@ -6,10 +6,11 @@ permalink: /members/
 hero: true
 fullBleed: true
 ---
-{% macro formerGrid(people) %}
-  <ul class="former-list">
+{% macro formerGrid(people, photos = true) %}
+  <ul class="former-list{% if not photos %} former-list--names{% endif %}">
     {% for person in people %}
     <li class="former">
+      {% if photos %}
       <div class="former-photo">
         {% if person.photo %}
         <img src="{{ person.photo }}" alt="{{ person.name }}">
@@ -20,10 +21,13 @@ fullBleed: true
         </svg>
         {% endif %}
       </div>
+      {% endif %}
       <div class="former-body">
         <h3 class="former-name">{{ person.name }}</h3>
+        {# Name-only cards lead with the years, then the position. #}
+        {% if not photos and person.years %}<p class="former-meta">{{ person.years }}</p>{% endif %}
         {% if person.role %}<p class="former-meta">{{ person.role }}</p>{% endif %}
-        {% if person.years %}<p class="former-meta">{{ person.years }}</p>{% endif %}
+        {% if photos and person.years %}<p class="former-meta">{{ person.years }}</p>{% endif %}
         {% if person.programme %}<p class="former-meta">{{ person.programme }}</p>{% endif %}
         {% if person.awards and person.awards.length %}
         <ul class="member-awards">
@@ -71,7 +75,7 @@ fullBleed: true
       {% for sub in group.subgroups %}
       <section class="member-subgroup">
         <h3 class="members-heading">{{ sub.title }}</h3>
-        {{ formerGrid(sub.people) }}
+        {{ formerGrid(sub.people, sub.photos != false) }}
       </section>
       {% endfor %}
 

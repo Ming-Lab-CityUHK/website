@@ -1,5 +1,5 @@
 {
-  "_comment": "Lab members, rendered on /members/ below the PI band. Each object in `groups` becomes a heading plus a list of people; add a group (Postdocs, MSc Students, Alumni) by adding an object here. Person fields: name, joined (year only; renders as \"Joined 2023\" under the photo), photo (path under /assets/, blank shows a placeholder), interests [], hobbies [], blurb (self-intro or short quote, shown under an \"In their words\" label; inline HTML such as <em> is rendered, not escaped), links {github, orcid, linkedin, email}, programme (e.g. a joint PhD scheme; shown above awards), and awards [] (one string per award; listed under the joined year, or under the years on a grid card). Every field except name is optional — omit or leave blank and it is skipped, including the whole icon row. A group with \"layout\": \"grid\" instead renders compact cards four to a row, using name, role, years, note and photo; a group with an empty people list reserves blank space under its heading. A group can instead hold \"subgroups\": [{title, people}], each rendered as its own sub-heading plus grid, as Former Lab Members does for PhD & Postdoc and MSc students.",
+  "_comment": "Lab members, rendered on /members/ below the PI band. Each object in `groups` becomes a heading plus a list of people; add a group (Postdocs, MSc Students, Alumni) by adding an object here. Person fields: name, joined (year only; renders as \"Joined 2023\" under the photo), photo (path under /assets/, blank shows a placeholder), interests [], hobbies [], blurb (self-intro or short quote, shown under an \"In their words\" label; inline HTML such as <em> is rendered, not escaped), links {github, orcid, linkedin, email}, programme (e.g. a joint PhD scheme; shown above awards), and awards [] (one string per award; listed under the joined year, or under the years on a grid card). Every field except name is optional — omit or leave blank and it is skipped, including the whole icon row. A group with \"layout\": \"grid\" instead renders compact cards four to a row, using name, role, years, note and photo; a group with an empty people list reserves blank space under its heading. A group can instead hold \"subgroups\": [{title, people}], each rendered as its own sub-heading plus grid, as Former Lab Members does for PhD & Postdoc and MSc students. A subgroup with \"photos\": false drops the photo and lists name, role (e.g. CWS/CIS, FYP, Student helper) and years only, as Former Lab Members does for Undergraduate Students.",
   "groups": [
     {
       "title": "PhD Students",
@@ -256,6 +256,217 @@
               "name": "Xinyu Liang",
               "years": "2025–2026",
               "photo": ""
+            }
+          ]
+        },
+        {
+          "title": "Undergraduate Students",
+          "photos": false,
+          "people": [
+            {
+              "name": "Esther Yi Ching Wan",
+              "years": "2015–2017",
+              "role": "CWS/CIS · FYP"
+            },
+            {
+              "name": "Shuk Wun Katie Lee",
+              "years": "2017–2018",
+              "role": "FYP"
+            },
+            {
+              "name": "Ka Hei Lam",
+              "years": "2017–2018",
+              "role": "CWS/CIS"
+            },
+            {
+              "name": "Chin Wing Phoebe To",
+              "years": "2018–2019",
+              "role": "CWS/CIS"
+            },
+            {
+              "name": "Ho Ying Zoe Wan",
+              "years": "2018–2019",
+              "role": "FYP"
+            },
+            {
+              "name": "Yan Kin Victor Lee",
+              "years": "2018–2019",
+              "role": "FYP"
+            },
+            {
+              "name": "Alex Yin Chung Wong",
+              "years": "2018–2019",
+              "role": "FYP"
+            },
+            {
+              "name": "Jie Yu Fong",
+              "years": "2019–2021",
+              "role": "CWS/CIS · FYP"
+            },
+            {
+              "name": "Zhanna Mushkenova",
+              "years": "2019–2020",
+              "role": "CWS/CIS"
+            },
+            {
+              "name": "Ria Chopra",
+              "years": "2019–2020",
+              "role": "FYP"
+            },
+            {
+              "name": "Doyoung Kim",
+              "years": "2020–2022",
+              "role": "CWS/CIS · Research rotation · FYP"
+            },
+            {
+              "name": "Chunxi Liu",
+              "years": "2020–2022",
+              "role": "Research rotation · FYP"
+            },
+            {
+              "name": "Chui Yuk Tong",
+              "years": "2020–2021",
+              "role": "FYP"
+            },
+            {
+              "name": "Wai Yin Chan",
+              "years": "2020–2021",
+              "role": "FYP"
+            },
+            {
+              "name": "Chun Yan Lam",
+              "years": "2020–2021",
+              "role": "FYP"
+            },
+            {
+              "name": "Po Man Lai",
+              "years": "2021–2023",
+              "role": "CWS/CIS · Research rotation · FYP"
+            },
+            {
+              "name": "Man In Li",
+              "years": "2021–2022",
+              "role": "FYP"
+            },
+            {
+              "name": "Sromona Roy",
+              "years": "2021–2022",
+              "role": "FYP"
+            },
+            {
+              "name": "Shing Hin Hugo Chan",
+              "years": "2022–2023",
+              "role": "CWS/CIS · FYP"
+            },
+            {
+              "name": "Vinisha Amitkumar Soni",
+              "years": "2022–2023",
+              "role": "FYP"
+            },
+            {
+              "name": "Julia Ying",
+              "years": "2023–2024",
+              "role": "Research rotation"
+            },
+            {
+              "name": "Jon Daniel Galura",
+              "years": "2023–2024",
+              "role": "FYP"
+            },
+            {
+              "name": "Jocelyn Andrea Madolen",
+              "years": "2024–2026",
+              "role": "CWS/CIS · FYP"
+            },
+            {
+              "name": "Elizabeth Felicia Andriani",
+              "years": "2024–2025",
+              "role": "Research rotation"
+            },
+            {
+              "name": "Yan Tung Kyna Lau",
+              "years": "2024–2025",
+              "role": "FYP"
+            },
+            {
+              "name": "Yan Wing Au Yeung",
+              "years": "2024–2025",
+              "role": "FYP"
+            },
+            {
+              "name": "Junxi Xie",
+              "years": "2024–2025",
+              "role": "FYP"
+            },
+            {
+              "name": "Ruby Wing Yu Lee",
+              "years": "2024–2025",
+              "role": "Student helper"
+            },
+            {
+              "name": "Xiaolu Shi",
+              "years": "2025–2026",
+              "role": "Research rotation"
+            },
+            {
+              "name": "Jiachi Han",
+              "years": "2025–2026",
+              "role": "Research rotation"
+            },
+            {
+              "name": "Chuting Shao",
+              "years": "2025–2026",
+              "role": "FYP"
+            },
+            {
+              "name": "Tsz Yiu Joyce Lam",
+              "years": "2025–2026",
+              "role": "FYP"
+            },
+            {
+              "name": "Cheuk Yung Ashley Cheng",
+              "years": "2025–2026",
+              "role": "FYP"
+            },
+            {
+              "name": "Kim Ting Clinton Yip",
+              "years": "2025–2026",
+              "role": "Student helper"
+            },
+            {
+              "name": "Aurell Wijaya",
+              "years": "2025–2026",
+              "role": "Student helper"
+            },
+            {
+              "name": "Alvina Wing Yuen Lam",
+              "years": "2025–2026",
+              "role": "Student helper"
+            },
+            {
+              "name": "Ziwen Su",
+              "years": "2026–2027",
+              "role": "CWS/CIS"
+            },
+            {
+              "name": "Tsz Yin Chui",
+              "years": "2026–2027",
+              "role": "Research rotation"
+            },
+            {
+              "name": "Nga Yi Cheung",
+              "years": "2026–2027",
+              "role": "FYP"
+            },
+            {
+              "name": "Hiu Ching Nicole Yim",
+              "years": "2026–2027",
+              "role": "FYP"
+            },
+            {
+              "name": "Tsz Tung Ting",
+              "years": "2026–2027",
+              "role": "FYP"
             }
           ]
         }

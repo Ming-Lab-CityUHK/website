@@ -935,6 +935,11 @@ main.full-bleed { padding-block: 0; }
   text-underline-offset: 0.2em;
 }
 
+/* Name-only cards (no photo): rows sit closer and the text starts flush
+   with the top of the card. */
+.former-list--names { row-gap: 2rem; }
+.former-list--names .former-body { margin-top: 0; }
+
 @media (max-width: 899px) {
   .former-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
