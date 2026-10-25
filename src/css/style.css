@@ -363,7 +363,7 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 }
 
 .home-feature {
-  padding-block: clamp(3rem, 7vw, 6rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
 }
 
 .home-feature-inner,
@@ -410,7 +410,7 @@ h2 { font-size: 1.35rem; margin: 2.5rem 0 1rem; }
 }
 
 .home-section {
-  padding-block: clamp(3rem, 7vw, 5.5rem);
+  padding-block: clamp(3rem, 6vw, 4.5rem);
   border-top: 1px solid var(--line);
 }
 
