@@ -72,7 +72,7 @@
 
 {% if hero %}
 <section class="hero">
-  <div class="hero-media"{% if heroImage %} style="background-image: url('{{ heroImage }}')"{% endif %}>
+  <div class="hero-media{% if heroBlur %} hero-media--blur{% endif %}"{% if heroImage %} style="background-image: url('{{ heroImage }}'){% if heroSize %}; background-size: {{ heroSize }}{% endif %}{% if heroPosition %}; background-position: {{ heroPosition }}{% endif %}"{% endif %}>
     {% if not heroImage %}
     <span class="hero-placeholder">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">

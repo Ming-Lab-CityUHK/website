@@ -729,12 +729,19 @@ ol.home-publication-list,
   justify-content: center;
 }
 
+/* Pages that set heroBlur soften the photo into a backdrop. The slight
+   scale pushes the blur's faded edges outside the clipped hero. */
+.hero-media--blur {
+  filter: blur(8px);
+  transform: scale(1.06);
+}
+
 /* Dark grey wash, kept light so a real photo still reads through. */
 .hero-media::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(40, 46, 54, 0.35);
+  background: rgba(40, 46, 54, 0.55);
 }
 
 .hero-placeholder {
