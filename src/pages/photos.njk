@@ -3,6 +3,35 @@ layout: layouts/base.njk
 title: Photos
 description: Photos and lab moments from Ming Lab at City University of Hong Kong.
 permalink: /photos/
-centered: true
+fullBleed: true
 ---
-<h1>Coming Soon!</h1>
+<div class="photos">
+  <h1>Photos</h1>
+
+  {% for group in photos.items | byYear %}
+  <section class="pub-year">
+    <h2 class="pub-year-label">{{ group.year }}</h2>
+
+    {# Three or more: the first photo gets its own row, the rest share one. #}
+    {% if group.items.length >= 3 %}
+      {% set rows = [group.items.slice(0, 1), group.items.slice(1)] %}
+    {% else %}
+      {% set rows = [group.items] %}
+    {% endif %}
+
+    {% for row in rows %}
+    <div class="photo-row">
+      {% for photo in row %}
+      {# Grow in proportion to the aspect ratio so every photo in the row
+         lands at the same height without cropping. #}
+      <figure class="photo" style="flex-grow: {{ photo.width / photo.height }}">
+        <img src="{{ photo.src }}" width="{{ photo.width }}" height="{{ photo.height }}"
+             alt="{{ photo.alt }}" loading="lazy">
+        {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>

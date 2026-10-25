@@ -1,0 +1,117 @@
+{
+  "_comment": "One object per photo, rendered on /photos/ grouped by year, newest year first. Within a year, photos keep the order listed here: with three or more, the first spans the full width and the rest share a row below. Fields: year, src (path under /assets/), width and height (the image's pixel size, which sets its shape in the row), caption (blank for none) and alt (describes the photo for screen readers).",
+  "items": [
+    {
+      "year": 2024,
+      "src": "/assets/photos/bms-gala-2024.webp",
+      "width": 2400,
+      "height": 1800,
+      "caption": "BMS Gala",
+      "alt": "Lab members standing in a row at the BMS Gala"
+    },
+    {
+      "year": 2024,
+      "src": "/assets/photos/lab-outing-2024.webp",
+      "width": 1281,
+      "height": 797,
+      "caption": "Lab outing",
+      "alt": "Lab members posing together in a purple-lit room on a lab outing"
+    },
+    {
+      "year": 2024,
+      "src": "/assets/photos/lab-photo-2024.webp",
+      "width": 1108,
+      "height": 639,
+      "caption": "Lab photo",
+      "alt": "Lab members gathered on a grassy hilltop with the sea behind them"
+    },
+    {
+      "year": 2023,
+      "src": "/assets/photos/lab-lunch-2023-06.webp",
+      "width": 1789,
+      "height": 1280,
+      "caption": "Lab lunch · June",
+      "alt": "Lab members seated around a long table at a lab lunch"
+    },
+    {
+      "year": 2021,
+      "src": "/assets/photos/lab-photo-2021-10.webp",
+      "width": 2400,
+      "height": 1800,
+      "caption": "Lab photo · October",
+      "alt": "Ming Lab group photo in the lab"
+    },
+    {
+      "year": 2021,
+      "src": "/assets/photos/lab-photo-2021-02-26.webp",
+      "width": 1346,
+      "height": 1014,
+      "caption": "Lab photo · February",
+      "alt": "Ming Lab group photo in front of the department wall"
+    },
+    {
+      "year": 2020,
+      "src": "/assets/photos/lab-photo-2020-11-12.webp",
+      "width": 1452,
+      "height": 1125,
+      "caption": "Lab photo · November",
+      "alt": "Ming Lab group photo in front of the department wall"
+    },
+    {
+      "year": 2019,
+      "src": "/assets/photos/lab-photo-2019-10-15.webp",
+      "width": 1278,
+      "height": 846,
+      "caption": "Lab photo · October",
+      "alt": "Ming Lab group photo in front of the department wall"
+    },
+    {
+      "year": 2018,
+      "src": "/assets/photos/lab-photo-2018-07.webp",
+      "width": 1448,
+      "height": 874,
+      "caption": "Lab photo · July",
+      "alt": "Lab members around a dinner table"
+    },
+    {
+      "year": 2018,
+      "src": "/assets/photos/lab-photo-2018-04.webp",
+      "width": 2400,
+      "height": 1800,
+      "caption": "Lab photo · April",
+      "alt": "Ming Lab group photo in front of the department wall"
+    },
+    {
+      "year": 2017,
+      "src": "/assets/photos/lab-photo-2017-08.webp",
+      "width": 1059,
+      "height": 683,
+      "caption": "Lab photo · August",
+      "alt": "Ming Lab group photo in front of the department wall"
+    },
+    {
+      "year": 2016,
+      "src": "/assets/photos/ocean-park-2016-12-a.webp",
+      "width": 1600,
+      "height": 901,
+      "caption": "Ocean Park · December",
+      "alt": "Lab members taking a group selfie at Ocean Park"
+    },
+    {
+      "year": 2016,
+      "src": "/assets/photos/ocean-park-2016-12-b.webp",
+      "width": 1200,
+      "height": 1600,
+      "caption": "Ocean Park · December",
+      "alt": "Lab members in front of a large Christmas tree at Ocean Park"
+    },
+    {
+      "year": 2016,
+      "src": "/assets/photos/misc-img-3346.webp",
+      "width": 1296,
+      "height": 972,
+      "caption": "",
+      "alt": "Four lab members outdoors beside a garden path"
+    }
+  ]
+}
