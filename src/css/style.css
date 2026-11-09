@@ -1150,14 +1150,9 @@ main.full-bleed { padding-block: 0; }
 .topic:last-child { border-bottom: 1px solid var(--ink); }
 
 .topic-inner {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  column-gap: 6rem;
-  align-items: start;
   padding: 3rem 4.5rem;
   /* Left edge follows the centred content column, so titles and text
-     line up with the page heading while the rules and figure stay
-     wider. Half the difference between the 1450px topic band and the
+     line up with the page heading while the rules stay wider. Half the difference between the 1450px topic band and the
      1080px container, expressed against this block's own width so it
      holds at any viewport. */
   padding-left: clamp(0px, calc(50% + 24px - 540px), 185px);
@@ -1168,37 +1163,13 @@ main.full-bleed { padding-block: 0; }
   font-size: 1.6rem;
 }
 
+/* Text keeps the same measure as the intro paragraph above. */
+.topic-text { max-width: calc(var(--container) - 2 * var(--edge)); }
 .topic-text p { margin: 0 0 1rem; }
 .topic-text p:last-child { margin-bottom: 0; }
 
-.topic-figure {
-  aspect-ratio: 4 / 3;
-  background: #f5f7f9;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #c8cfd7;
-}
-.topic-figure img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.topic-figure svg {
-  width: 34px;
-  height: 34px;
-}
-
 @media (max-width: 899px) {
-  .topic-inner {
-    grid-template-columns: 1fr;
-    row-gap: 1.75rem;
-    padding: 2.5rem 0;
-  }
+  .topic-inner { padding: 2.5rem 0; }
 }
 
 /* ---------- contact ---------- */

@@ -2,6 +2,38 @@
   "_comment": "One object per photo, rendered on /photos/ grouped by year, newest year first. Within a year, photos keep the order listed here: with three or more, the first spans the full width and the rest share a row below. Fields: year, src (path under /assets/), width and height (the image's pixel size, which sets its shape in the row), caption (blank for none) and alt (describes the photo for screen readers).",
   "items": [
     {
+      "year": 2026,
+      "src": "/assets/photos/jiaohua-defense-2026.webp",
+      "width": 2400,
+      "height": 1556,
+      "caption": "Jiaohua's defense",
+      "alt": "Jiaohua holding a bouquet of sunflowers with lab members in the lab after the PhD defense"
+    },
+    {
+      "year": 2026,
+      "src": "/assets/photos/jiaohua-defense-lunch-2026.webp",
+      "width": 1916,
+      "height": 1362,
+      "caption": "Lunch after Jiaohua's defense",
+      "alt": "Lab members seated around a round table at lunch after Jiaohua's PhD defense"
+    },
+    {
+      "year": 2026,
+      "src": "/assets/photos/bobby-defense-2026.webp",
+      "width": 2400,
+      "height": 1800,
+      "caption": "Bobby's defense",
+      "alt": "Bobby standing with four others in front of a screen showing the title of the PhD defense"
+    },
+    {
+      "year": 2026,
+      "src": "/assets/photos/bobby-defense-lunch-2026.webp",
+      "width": 2400,
+      "height": 1800,
+      "caption": "Lunch after Bobby's defense",
+      "alt": "Lab members seated around a round table at lunch, with Bobby standing behind holding flowers"
+    },
+    {
       "year": 2024,
       "src": "/assets/photos/bms-gala-2024.webp",
       "width": 2400,

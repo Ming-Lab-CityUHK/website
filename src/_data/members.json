@@ -221,6 +221,7 @@
         },
         {
           "title": "MSc Students",
+          "photos": false,
           "people": [
             {
               "name": "Xiaoxiang Gong",
