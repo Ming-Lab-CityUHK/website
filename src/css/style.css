@@ -1139,37 +1139,40 @@ main.full-bleed { padding-block: 0; }
 .research-intro { padding-block: 2.5rem 0; }
 
 .research-topics {
-  max-width: 1450px;
-  margin: 3.5rem auto 4rem;
+  max-width: var(--container);
+  margin: calc(2rem + 10px) auto 4rem;
   padding-inline: var(--edge);
 }
 
-/* Hairline rule above every topic, and below the last, so each block is
-   bracketed by rules that overhang its content. */
-.topic { border-top: 1px solid var(--ink); }
-.topic:last-child { border-bottom: 1px solid var(--ink); }
+/* Grey hairline between topics, as between papers on Publications. */
+.topic { border-bottom: 1px solid var(--line); }
+.topic:last-child { border-bottom: 0; }
 
+/* Title on the left, summary beside it. The title column is just wide
+   enough for the longest one-line title, so only the in-vivo title
+   wraps to a second line. */
 .topic-inner {
-  padding: 3rem 4.5rem;
-  /* Left edge follows the centred content column, so titles and text
-     line up with the page heading while the rules stay wider. Half the difference between the 1450px topic band and the
-     1080px container, expressed against this block's own width so it
-     holds at any viewport. */
-  padding-left: clamp(0px, calc(50% + 24px - 540px), 185px);
+  display: grid;
+  grid-template-columns: 27rem minmax(0, 1fr);
+  column-gap: 3rem;
+  align-items: baseline;
+  padding-block: 1.6rem;
 }
 
 .topic-title {
-  margin: 0 0 1rem;
+  margin: 0;
   font-size: 1.6rem;
 }
 
-/* Text keeps the same measure as the intro paragraph above. */
-.topic-text { max-width: calc(var(--container) - 2 * var(--edge)); }
 .topic-text p { margin: 0 0 1rem; }
 .topic-text p:last-child { margin-bottom: 0; }
 
+/* Too narrow for two columns: the summary drops under its title. */
 @media (max-width: 899px) {
-  .topic-inner { padding: 2.5rem 0; }
+  .topic-inner {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.75rem;
+  }
 }
 
 /* ---------- contact ---------- */

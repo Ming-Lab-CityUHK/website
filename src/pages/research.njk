@@ -15,8 +15,8 @@ fullBleed: true
   {% for topic in research.topics %}
   <article class="topic">
     <div class="topic-inner">
+      <h2 class="topic-title">{{ topic.title }}</h2>
       <div class="topic-text">
-        <h2 class="topic-title">{{ topic.title }}</h2>
         {% for paragraph in topic.paragraphs %}
         <p>{{ paragraph }}</p>
         {% endfor %}
