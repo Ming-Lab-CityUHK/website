@@ -1346,6 +1346,8 @@ main.full-bleed { padding-block: 0; }
   text-decoration-color: rgba(29, 91, 216, 0.35);
 }
 .pub-title:hover { text-decoration-color: currentColor; }
+/* Accepted papers with no DOI yet: nothing to link to. */
+.pub-title--unlinked { color: var(--ink); text-decoration: none; }
 
 .pub-cite {
   margin: 0;

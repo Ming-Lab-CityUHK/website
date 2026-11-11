@@ -42,7 +42,8 @@ Append an object to `src/_data/publications.json`. Entries are grouped by year.
 | --- | --- |
 | `authors` | `[{ "family": "Chan", "given": "KM", "lab": true, "corresponding": true }]`. Initials may be written `KM` or `K. M.` both render `K. M.` `lab` bolds a lab member; `corresponding` adds a superscript `#`. Use `literal` instead of `family`/`given` for group authors. All authors are listed. |
 | `journal` | Spelled out in full. |
-| `doi` | Builds the title link. |
+| `doi` | Builds the title link. Leave blank for an accepted paper that has no DOI yet; the title then shows without a link. |
+| `inPress` | `true` for an accepted paper: shows "(in press)" in place of the year. `year` still decides which year it's listed under. |
 | `url` | Overrides the DOI link on the title. |
 | `date`, `volume`, `issue`, `pages` | Recorded but not displayed. |
 

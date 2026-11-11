@@ -1,6 +1,6 @@
 {# One publication row, shared by the Publications page and the homepage's
    Selected Publications. Expects `paper` in scope. #}
-{% set link = paper.url if paper.url else "https://doi.org/" + paper.doi %}
+{% set link = paper.url if paper.url else ("https://doi.org/" + paper.doi if paper.doi else "") %}
 <li class="pub-entry">
   <div class="pub-figure">
     {% if paper.thumbnail %}
@@ -22,10 +22,14 @@
 
   <div class="pub-body">
     <p class="pub-title-line">
+      {% if link %}
       <a class="pub-title" href="{{ link }}" target="_blank" rel="noopener">{{ paper.title }}</a>
+      {% else %}
+      <span class="pub-title pub-title--unlinked">{{ paper.title }}</span>
+      {% endif %}
     </p>
     <p class="pub-cite">
-      {{ paper.authors | apaAuthors | safe }}, <em class="pub-journal">{{ paper.journal }}</em> ({{ paper.year }}).
+      {{ paper.authors | apaAuthors | safe }}, <em class="pub-journal">{{ paper.journal }}</em> ({{ "in press" if paper.inPress else paper.year }}).
     </p>
   </div>
 </li>

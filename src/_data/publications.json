@@ -1,6 +1,128 @@
 {
-  "_comment": "One object per paper. Rendered as APA 7 references, grouped by year (newest year first); within a year, papers appear in the order listed here. Fields: title, authors [{family, given, lab, corresponding}], year, date (reference only, no longer affects ordering), journal (spelled out in full), volume, issue, pages, doi, url (defaults to the DOI link), thumbnail (path under /assets/ such as /assets/publications/x.webp; only the pre-scaled x@1x.webp, x@2x.webp and x@3x.webp files at 150, 300 and 450px wide need to exist; blank shows a placeholder). Author initials may be written \"KM\" or \"K. M.\" — both render as \"K. M.\". Set \"lab\": true to bold a lab member. \"corresponding\": true renders a superscript # after the author's name.",
+  "_comment": "One object per paper. Rendered as APA 7 references, grouped by year (newest year first); within a year, papers appear in the order listed here. Fields: title, authors [{family, given, lab, corresponding}], year, date (reference only, no longer affects ordering), inPress (true for an accepted paper: shows \"in press\" instead of the year), journal (spelled out in full), volume, issue, pages, doi (blank if not yet assigned: the title is then unlinked), url (defaults to the DOI link), thumbnail (path under /assets/ such as /assets/publications/x.webp; only the pre-scaled x@1x.webp, x@2x.webp and x@3x.webp files at 150, 300 and 450px wide need to exist; blank shows a placeholder). Author initials may be written \"KM\" or \"K. M.\" — both render as \"K. M.\". Set \"lab\": true to bold a lab member. \"corresponding\": true renders a superscript # after the author's name.",
   "papers": [
+    {
+      "title": "Microbiota-based modulation of intratumoral cholesterol metabolism for colorectal cancer treatment",
+      "authors": [
+        { "family": "Wu", "given": "Jiayan" },
+        { "family": "Li", "given": "Liguo" },
+        { "family": "Lai", "given": "Yingyao" },
+        { "family": "Li", "given": "Jinming" },
+        { "family": "Asthana", "given": "Pallavi" },
+        { "family": "Zhai", "given": "Lixiang" },
+        { "family": "Chen", "given": "Lexin" },
+        { "family": "Chen", "given": "Minting" },
+        { "family": "Chen", "given": "Baisen" },
+        { "family": "Gurung", "given": "Susma" },
+        { "family": "Lyu", "given": "Jin" },
+        { "family": "Zhang", "given": "Yijing" },
+        { "family": "Lin", "given": "Lu" },
+        { "family": "Huang", "given": "Shuojie" },
+        { "family": "Kuang", "given": "Weihong" },
+        { "family": "Shi", "given": "Hui" },
+        { "family": "Luo", "given": "Yungyung" },
+        { "family": "Gou", "given": "Zhanping" },
+        { "family": "Kong", "given": "Xiangxin" },
+        { "family": "Wong", "given": "Sunny H" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Yuan", "given": "Shuofeng" },
+        { "family": "Kwan", "given": "Hiu Yee" },
+        { "family": "Yuan", "given": "Xia" },
+        { "family": "Huang", "given": "Weizhen" },
+        { "family": "Ruan", "given": "Yongdui" },
+        { "family": "Lu", "given": "Hongmei" },
+        { "family": "Wong", "given": "Chi Chun" },
+        { "family": "Su", "given": "Ya" },
+        { "family": "Koohi-Moghadam", "given": "Mohamad" },
+        { "family": "Lyu", "given": "Aiping" },
+        { "family": "Bian", "given": "Zhaoxiang" },
+        { "family": "Ren", "given": "Yixing" },
+        { "family": "Hu", "given": "Xiangjian" },
+        { "family": "Ma", "given": "Yanlei" },
+        { "family": "Wong", "given": "Hoi Leong Xavier" }
+      ],
+      "year": 2026,
+      "inPress": true,
+      "date": "",
+      "journal": "Nature Metabolism",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "url": "",
+      "thumbnail": ""
+    },
+    {
+      "title": "The R-loop-SPT6-SETD2 axis safeguards H3K36me3 to prevent broad H3K4me3 invasion in mouse oocytes",
+      "authors": [
+        { "family": "Sheng", "given": "Yingliang" },
+        { "family": "Guo", "given": "Tianyan" },
+        { "family": "Ma", "given": "Ying" },
+        { "family": "Liao", "given": "Junzhi" },
+        { "family": "Guo", "given": "Rong" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Pan", "given": "Guangjin" },
+        { "family": "Jiang", "given": "Cizhong" },
+        { "family": "Yao", "given": "Hongjie" }
+      ],
+      "year": 2026,
+      "date": "2026-09",
+      "journal": "Cell Reports",
+      "volume": "45",
+      "issue": "9",
+      "pages": "117813",
+      "doi": "10.1016/j.celrep.2026.117813",
+      "url": "",
+      "thumbnail": "/assets/publications/sheng-2026-cell-reports.webp"
+    },
+    {
+      "title": "Deubiquitination of Vangl by USP6 and USP32 regulates planar cell polarity signaling",
+      "authors": [
+        { "family": "Zha", "given": "Fangzi" },
+        { "family": "Feng", "given": "Di" },
+        { "family": "Xue", "given": "Ziru" },
+        { "family": "Liu", "given": "Zhiying" },
+        { "family": "Lin", "given": "Xiaochen" },
+        { "family": "Wang", "given": "Zhe" },
+        { "family": "Xu", "given": "Ling" },
+        { "family": "Chan", "given": "Jasper Fuk Woo" },
+        { "family": "Cheung", "given": "Martin" },
+        { "family": "Huen", "given": "Michael Shing Yan" },
+        { "family": "Guo", "given": "Yusong" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Liu", "given": "Yun" },
+        { "family": "Gao", "given": "Bo" }
+      ],
+      "year": 2026,
+      "date": "2026-08-30",
+      "journal": "Advanced Science",
+      "volume": "",
+      "issue": "",
+      "pages": "e77496",
+      "doi": "10.1002/advs.77496",
+      "url": "",
+      "thumbnail": "/assets/publications/zha-2026-advanced-science.webp"
+    },
+    {
+      "title": "Histone modifications: Mechanisms, metabolic regulation, and therapeutic targeting in cancer",
+      "authors": [
+        { "family": "Wang", "given": "Lingli" },
+        { "family": "Li", "given": "Shiying" },
+        { "family": "Hu", "given": "Xiaoyan" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Meng", "given": "Yang" },
+        { "family": "Han", "given": "Junhong" }
+      ],
+      "year": 2026,
+      "date": "2026-07-30",
+      "journal": "Precision Clinical Medicine",
+      "volume": "9",
+      "issue": "3",
+      "pages": "pbag024",
+      "doi": "10.1093/pcmedi/pbag024",
+      "url": "",
+      "thumbnail": "/assets/publications/wang-2026-precision-clinical-medicine.webp"
+    },
     {
       "title": "H2BE113K mutation promotes breast cancer metastasis through modulating chromatin dynamics",
       "authors": [
@@ -26,14 +148,31 @@
         { "family": "Chan", "given": "KM", "lab": true }
       ],
       "year": 2026,
-      "date": "",
+      "date": "2026-07-10",
       "journal": "Science Advances",
-      "volume": "",
-      "issue": "",
-      "pages": "",
+      "volume": "12",
+      "issue": "28",
+      "pages": "eadx4982",
       "doi": "10.1126/sciadv.adx4982",
       "url": "",
       "thumbnail": "/assets/publications/hu-2026-science-advances.webp"
+    },
+    {
+      "title": "Neoadjuvant therapy in primary liver cancer: From the missing piece to a new paradigm",
+      "authors": [
+        { "family": "Li", "given": "Zhe" },
+        { "family": "Chan", "given": "KM", "lab": true },
+        { "family": "Jin", "given": "Haojie" }
+      ],
+      "year": 2026,
+      "date": "2026-06-29",
+      "journal": "Hepatology Communications",
+      "volume": "10",
+      "issue": "7",
+      "pages": "",
+      "doi": "10.1097/HC9.0000000000000977",
+      "url": "",
+      "thumbnail": "/assets/publications/li-2026-hepatology-communications.webp"
     },
     {
       "title": "A pharmacovigilance data–driven approach to reveal high fatal adverse events following checkpoint immunotherapy",
@@ -259,7 +398,7 @@
       "thumbnail": "/assets/publications/peng-2025-nature-communications.webp"
     },
     {
-      "title": "Hepatocellular carcinoma: signaling pathways and therapeutic advances",
+      "title": "Hepatocellular carcinoma: Signaling pathways and therapeutic advances",
       "authors": [
         { "family": "Zheng", "given": "Jiaojiao" },
         { "family": "Wang", "given": "Siying" },
@@ -309,7 +448,7 @@
       "thumbnail": "/assets/publications/he-2024-epigenetics-chromatin.webp"
     },
     {
-      "title": "Perturbation of mRNA splicing in liver cancer: insights, opportunities and challenges",
+      "title": "Perturbation of mRNA splicing in liver cancer: Insights, opportunities and challenges",
       "authors": [
         { "family": "Jia", "given": "Qi" },
         { "family": "Sun", "given": "Xiaoxiao" },
